@@ -4,7 +4,9 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import * as React from 'react'
 
 import { RootStackParamList } from '../types'
-import Home from '../screens/Home/index'
+
+import Home from '../screens/Home'
+import Timer from '../screens/Timer'
 
 export default function Navigation () {
   return (
@@ -24,7 +26,7 @@ function RootNavigator () {
   return (
     <Stack.Navigator>
       <Stack.Screen name="Root" component={Home} options={{ headerShown: false }} />
-
+      <Stack.Screen name="Timer" component={Timer} options={{ headerShown: false }} />
     </Stack.Navigator>
   )
 }

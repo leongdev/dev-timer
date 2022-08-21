@@ -1,4 +1,4 @@
-
+import AsyncStorage from '@react-native-async-storage/async-storage'
 import * as S from './styles'
 import { RootTabScreenProps } from '../types'
 import { View, useColorScheme } from 'react-native'
@@ -7,13 +7,25 @@ import Images from '../../components/Images'
 import { ImageNames } from '../../components/Images/images'
 import useResponsive from '../../hooks/useResponsive'
 import Button from '../../components/Button/index'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 function Home ({ navigation }: RootTabScreenProps<'TabOne'>) {
   const [pageIndex, setPageIndex] = useState(0)
   const theme = useColorScheme()
   const imageSize = useResponsive(8)
-  const iconSize = useResponsive(0.6)
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const response = await AsyncStorage.getItem('@pass_onboarding')
+        if (response) {
+          navigation.navigate('Timer')
+        }
+      } catch {
+        console.log('DEU RUIM')
+      }
+    })()
+  }, [])
 
   const renderPageOne = () => {
     return (
@@ -76,18 +88,19 @@ function Home ({ navigation }: RootTabScreenProps<'TabOne'>) {
         />
       </S.ImageContainer>
       <Button
-        icon={
-          () => (
-            <Images
-              name={theme === 'light' ? ImageNames.googleLight : ImageNames.googleDark}
-              width={iconSize}
-              height={iconSize}
-            />
-          )
-        }
-        title={'Login Google'}
+        onPress={loginGoogle}
+        // icon={
+        //   () => (
+        //     <Images
+        //       name={theme === 'light' ? ImageNames.googleLight : ImageNames.googleDark}
+        //       width={iconSize}
+        //       height={iconSize}
+        //     />
+        //   )
+        // }
+        title={'Entrar'}
       />
-      <View style={{ height: Layout.window.width * 0.04 }}/>
+      {/* <View style={{ height: Layout.window.width * 0.04 }}/>
       <Button
         inverted
         title={'Login Github'}
@@ -100,13 +113,22 @@ function Home ({ navigation }: RootTabScreenProps<'TabOne'>) {
             />
           )
         }
-      />
+      /> */}
     </S.OnboardingView>
     )
   }
 
   const setScrollViewIndex = (event) => {
     setPageIndex(parseInt(event.nativeEvent.contentOffset.x / Layout.window.width))
+  }
+
+  const loginGoogle = async () => {
+    try {
+      await AsyncStorage.setItem('@pass_onboarding', 'true')
+      navigation.navigate('Timer')
+    } catch (e) {
+      navigation.navigate('Timer')
+    }
   }
 
   return (

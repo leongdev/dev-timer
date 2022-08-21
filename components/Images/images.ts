@@ -26,6 +26,15 @@ import menuDotLight from '../../assets/images/menu_dot_light.png'
 import menuDotFilledDark from '../../assets/images/menu_dot_filled_dark.png'
 import menuDotFilledLight from '../../assets/images/menu_dot_filled_light.png'
 
+import playButtonDark from '../../assets/images/play_dark.png'
+import playButtonLight from '../../assets/images/play_light.png'
+
+import portalTimerDark from '../../assets/images/portal_dark.png'
+import portalTimerLight from '../../assets/images/portal_light.png'
+
+import quoteOpen from '../../assets/images/quote_open.png'
+import quoteClose from '../../assets/images/quote_close.png'
+
 const images = {
   bottomImageLight,
   bottomImageDark,
@@ -44,7 +53,13 @@ const images = {
   menuDotDark,
   menuDotLight,
   menuDotFilledDark,
-  menuDotFilledLight
+  menuDotFilledLight,
+  playButtonDark,
+  playButtonLight,
+  portalTimerDark,
+  portalTimerLight,
+  quoteOpen,
+  quoteClose
 }
 
 export enum ImageNames {
@@ -65,7 +80,13 @@ export enum ImageNames {
   menuDotDark= 'menuDotDark',
   menuDotLight= 'menuDotLight',
   menuDotFilledDark= 'menuDotFilledDark',
-  menuDotFilledLight= 'menuDotFilledLight'
+  menuDotFilledLight= 'menuDotFilledLight',
+  playButtonDark= 'playButtonDark',
+  playButtonLight= 'playButtonLight',
+  portalTimerDark= 'portalTimerDark',
+  portalTimerLight= 'portalTimerLight',
+  quoteOpen= 'quoteOpen',
+  quoteClose= 'quoteClose'
 }
 
 const getImage = (name) => images[name]

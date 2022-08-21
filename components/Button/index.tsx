@@ -5,12 +5,13 @@ interface IButton {
   title: string,
   inverted?: boolean,
   icon?: ReactNode,
+  onPress?: ()=> void,
 }
 
-const Button: React.FC<IButton> = ({ title, inverted, icon }) => {
+const Button: React.FC<IButton> = ({ title, inverted, icon, onPress }) => {
   if (inverted) {
     return (
-    <S.ButtonContainerInverted style={({ pressed }) => [{
+    <S.ButtonContainerInverted onPress={() => onPress && onPress()} style={({ pressed }) => [{
       opacity: pressed ? 0.4 : 1
     }]}>
       {icon && icon()}
@@ -22,7 +23,7 @@ const Button: React.FC<IButton> = ({ title, inverted, icon }) => {
   }
 
   return (
-    <S.ButtonContainer style={({ pressed }) => [{
+    <S.ButtonContainer onPress={() => onPress && onPress()} style={({ pressed }) => [{
       opacity: pressed ? 0.4 : 1
     }]}>
       {icon && icon()}
