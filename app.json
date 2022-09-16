@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "dev-timer",
+    "name": "Dev Timer", 
     "slug": "dev-timer",
+    "scheme": "dev-timer",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/app_icon.png",
-    "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/images/splash.png",
@@ -24,9 +24,13 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "buildNumber": "2",
+      "bundleIdentifier": "com.leongdev.devtimer",
+      "supportsTablet": true,
+      "usesAppleSignIn": true
     },
     "android": {
+      "versionCode": 2,  
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"

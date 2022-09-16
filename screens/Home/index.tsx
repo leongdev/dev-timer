@@ -7,25 +7,14 @@ import Images from '../../components/Images'
 import { ImageNames } from '../../components/Images/images'
 import useResponsive from '../../hooks/useResponsive'
 import Button from '../../components/Button/index'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
+import { handleGithubSignIn, handleGoogleSignIn } from '../../services/auth'
 
 function Home ({ navigation }: RootTabScreenProps<'TabOne'>) {
   const [pageIndex, setPageIndex] = useState(0)
   const theme = useColorScheme()
   const imageSize = useResponsive(8)
-
-  useEffect(() => {
-    (async () => {
-      try {
-        const response = await AsyncStorage.getItem('@pass_onboarding')
-        if (response) {
-          navigation.navigate('Timer')
-        }
-      } catch {
-        console.log('DEU RUIM')
-      }
-    })()
-  }, [])
+  const iconSize = useResponsive(0.5)
 
   const renderPageOne = () => {
     return (
@@ -89,19 +78,22 @@ function Home ({ navigation }: RootTabScreenProps<'TabOne'>) {
       </S.ImageContainer>
       <Button
         onPress={loginGoogle}
-        // icon={
-        //   () => (
-        //     <Images
-        //       name={theme === 'light' ? ImageNames.googleLight : ImageNames.googleDark}
-        //       width={iconSize}
-        //       height={iconSize}
-        //     />
-        //   )
-        // }
+        icon={
+          () => (
+            <Images
+              name={theme === 'light' ? ImageNames.googleLight : ImageNames.googleDark}
+              width={iconSize}
+              height={iconSize}
+            />
+          )
+        }
         title={'Entrar'}
       />
-      {/* <View style={{ height: Layout.window.width * 0.04 }}/>
+      <View style={{ height: Layout.window.width * 0.04 }}/>
       <Button
+        onPress={ async () => {
+          await handleGithubSignIn()
+        }}
         inverted
         title={'Login Github'}
         icon={
@@ -113,7 +105,7 @@ function Home ({ navigation }: RootTabScreenProps<'TabOne'>) {
             />
           )
         }
-      /> */}
+      />
     </S.OnboardingView>
     )
   }
@@ -123,12 +115,7 @@ function Home ({ navigation }: RootTabScreenProps<'TabOne'>) {
   }
 
   const loginGoogle = async () => {
-    try {
-      await AsyncStorage.setItem('@pass_onboarding', 'true')
-      navigation.navigate('Timer')
-    } catch (e) {
-      navigation.navigate('Timer')
-    }
+    await handleGoogleSignIn()
   }
 
   return (
