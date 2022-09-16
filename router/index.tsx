@@ -5,8 +5,8 @@ import * as React from 'react'
 
 import { RootStackParamList } from '../types'
 
-import Home from '../screens/Home'
-import Timer from '../screens/Timer'
+import Home from '../src/screens/Home'
+import Timer from '../src/screens/Timer'
 
 export default function Navigation () {
   return (

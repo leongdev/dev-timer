@@ -1,5 +1,5 @@
 import styled from 'styled-components/native'
-import Layout from '../../constants/Layout'
+import Layout from '../../../constants/Layout'
 
 export const ButtonContainer = styled.Pressable`
   background: ${({ theme }) => theme.colors.text};

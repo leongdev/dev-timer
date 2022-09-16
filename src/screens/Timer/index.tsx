@@ -2,7 +2,7 @@ import { useMemo, useEffect, useState, useCallback } from 'react'
 import { RootTabScreenProps } from '../types'
 
 import * as S from './styles'
-import Images from '../../components/Images/index'
+import Images from '../../components/Images'
 import { Pressable, useColorScheme, View, Text } from 'react-native'
 import useResponsive from '../../hooks/useResponsive'
 import { ImageNames } from '../../components/Images/images'
@@ -10,9 +10,9 @@ import { MotiImage } from 'moti'
 
 import portalTimerDark from '../../assets/images/portal_dark.png'
 import portalTimerLight from '../../assets/images/portal_light.png'
-import Layout from '../../constants/Layout'
-import quotesData from '../../data/quotes'
-import soundsData from '../../data/sounds'
+import Layout from '../../../constants/Layout'
+import quotesData from '../../../data/quotes'
+import soundsData from '../../../data/sounds'
 import { Audio } from 'expo-av'
 
 const INITIAL_TIME_IN_SECONDS = 50 * 60 // 25 minutes

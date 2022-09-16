@@ -3,10 +3,10 @@ import { StatusBar } from 'expo-status-bar'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { ThemeProvider } from 'styled-components'
 
-import useCachedResources from './hooks/useCachedResources'
+import useCachedResources from './src/hooks/useCachedResources'
 
 import Router from './router'
-import useDarkMode from './hooks/useDarkMode'
+import useDarkMode from './src/hooks/useDarkMode'
 
 export default function App () {
   const { theme } = useDarkMode()

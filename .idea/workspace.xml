@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="049a26bb-565e-48c0-9a9d-3aaff86c3b74" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/FiraCode-Bold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/FiraCode-Bold.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/SPLASH@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/SPLASH@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/SPLASH@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/SPLASH@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/adaptive-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/adaptive-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/app_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/app_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/app_icon@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/app_icon@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/app_icon@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/app_icon@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/bottom_image_dark.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/bottom_image_dark.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/bottom_image_dark@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/bottom_image_dark@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/bottom_image_dark@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/bottom_image_dark@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/bottom_image_light.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/bottom_image_light.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/bottom_image_light@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/bottom_image_light@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/bottom_image_light@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/bottom_image_light@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/github_dark.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/github_dark.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/github_dark@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/github_dark@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/github_dark@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/github_dark@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/github_light.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/github_light.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/github_light@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/github_light@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/github_light@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/github_light@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/google_dark.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/google_dark.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/google_dark@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/google_dark@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/google_dark@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/google_dark@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/google_light.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/google_light.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/google_light@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/google_light@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/google_light@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/google_light@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/image_1_dark.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/image_1_dark.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/image_1_dark@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/image_1_dark@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/image_1_dark@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/image_1_dark@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/image_1_light.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/image_1_light.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/image_1_light@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/image_1_light@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/image_1_light@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/image_1_light@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/image_2_dark.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/image_2_dark.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/image_2_dark@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/image_2_dark@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/image_2_dark@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/image_2_dark@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/image_2_light.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/image_2_light.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/image_2_light@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/image_2_light@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/image_2_light@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/image_2_light@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/logo_dark.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/logo_dark.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/logo_dark@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/logo_dark@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/logo_dark@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/logo_dark@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/logo_light.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/logo_light.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/logo_light@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/logo_light@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/logo_light@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/logo_light@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/menu_dot_dark.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/menu_dot_dark.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/menu_dot_dark@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/menu_dot_dark@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/menu_dot_dark@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/menu_dot_dark@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/menu_dot_filled_dark.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/menu_dot_filled_dark.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/menu_dot_filled_dark@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/menu_dot_filled_dark@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/menu_dot_filled_dark@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/menu_dot_filled_dark@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/menu_dot_filled_light.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/menu_dot_filled_light.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/menu_dot_filled_light@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/menu_dot_filled_light@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/menu_dot_filled_light@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/menu_dot_filled_light@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/menu_dot_light.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/menu_dot_light.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/menu_dot_light@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/menu_dot_light@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/menu_dot_light@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/menu_dot_light@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/play_dark.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/play_dark.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/play_dark@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/play_dark@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/play_dark@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/play_dark@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/play_light.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/play_light.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/play_light@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/play_light@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/play_light@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/play_light@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/portal_dark.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/portal_dark.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/portal_dark@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/portal_dark@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/portal_dark@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/portal_dark@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/portal_light.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/portal_light.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/portal_light@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/portal_light@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/portal_light@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/portal_light@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/quote_close.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/quote_close.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/quote_close@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/quote_close@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/quote_close@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/quote_close@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/quote_open.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/quote_open.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/quote_open@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/quote_open@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/quote_open@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/quote_open@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/splash.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/splash.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svg/onboarding_1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/svg/onboarding_1.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svg/quote_close.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/svg/quote_close.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svg/quote_open.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/svg/quote_open.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/top_image_dark.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/top_image_dark.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/top_image_dark@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/top_image_dark@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/top_image_dark@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/top_image_dark@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/top_image_light.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/top_image_light.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/top_image_light@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/top_image_light@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/top_image_light@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/top_image_light@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sounds/lofi_birds.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sounds/lofi_birds.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sounds/lofi_chill.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sounds/lofi_chill.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sounds/lofi_chill_in_the_rain.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sounds/lofi_chill_in_the_rain.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sounds/lofi_cosy_beat_with_piano.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sounds/lofi_cosy_beat_with_piano.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sounds/lofi_dream_lofi.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sounds/lofi_dream_lofi.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sounds/lofi_get_work_done.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sounds/lofi_get_work_done.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sounds/lofi_jazz_mood.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sounds/lofi_jazz_mood.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sounds/lofi_space_drifting.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sounds/lofi_space_drifting.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sounds/lofi_space_loop.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sounds/lofi_space_loop.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Button/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Button/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Images/images.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Images/images.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Images/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Images/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hooks/useCachedResources.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useCachedResources.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hooks/useDarkMode.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useDarkMode.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hooks/useResponsive.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useResponsive.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/router/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/Home/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Home/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/Home/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Home/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/Timer/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Timer/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/Timer/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Timer/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/auth/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/auth/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/dark.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/themes/dark.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/themes/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/light.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/themes/light.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/styled.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/themes/styled.d.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Epb7RAReF5JAh3MJC5BF0YvmZh" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/leongdev/Developer/dev-timer",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "ts.external.directory.path": "/Users/leongdev/Developer/dev-timer/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="049a26bb-565e-48c0-9a9d-3aaff86c3b74" name="Changes" comment="" />
+      <created>1663295305480</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1663295305480</updated>
+      <workItem from="1663295327003" duration="224000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
