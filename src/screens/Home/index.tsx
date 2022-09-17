@@ -1,5 +1,6 @@
 
 import * as S from './styles'
+import * as SVG from '../../components/SvgImages'
 import { RootTabScreenProps } from '../types'
 import { View, useColorScheme } from 'react-native'
 import Layout from '../../../constants/Layout'
@@ -9,29 +10,14 @@ import useResponsive from '../../hooks/useResponsive'
 import Button from '../../components/Button'
 import { useState } from 'react'
 import { handleGithubSignIn, handleGoogleSignIn } from '../../services/auth'
+import { useTheme } from '@react-navigation/native'
 
 function Home ({ navigation }: RootTabScreenProps<'TabOne'>) {
   const [pageIndex, setPageIndex] = useState(0)
   const theme = useColorScheme()
   const imageSize = useResponsive(8)
   const iconSize = useResponsive(0.5)
-
-  const renderPageOne = () => {
-    return (
-      <S.OnboardingView>
-      <S.ImageContainer>
-        <Images
-          name={theme === 'light' ? ImageNames.imageOneLight : ImageNames.imageOneDark}
-          width={imageSize}
-          height={imageSize}
-        />
-        <S.PageTitle>
-          Um timer feito especialmente para programadores.
-        </S.PageTitle>
-      </S.ImageContainer>
-    </S.OnboardingView>
-    )
-  }
+  const { colors } = useTheme()
 
   const renderPageTwo = () => {
     return (
@@ -53,41 +39,14 @@ function Home ({ navigation }: RootTabScreenProps<'TabOne'>) {
   const renderPageThree = (second) => {
     return (
     <S.OnboardingView>
-      <View style={{ position: 'absolute', top: -imageSize * 0.27, left: 0 }}>
-        <Images
-          name={theme === 'light' ? ImageNames.topImageLight : ImageNames.topImageDark}
-          width={imageSize * 0.6}
-          height={imageSize}
-        />
-      </View>
-
-      <View style={{ position: 'absolute', bottom: -imageSize * 0.15, right: 0 }}>
-        <Images
-          name={theme === 'light' ? ImageNames.bottomImageLight : ImageNames.bottomImageDark}
-          width={imageSize * 0.6}
-          height={imageSize}
-        />
-      </View>
 
       <S.ImageContainer>
-        <Images
-          name={theme === 'light' ? ImageNames.logoLight : ImageNames.logoDark}
-          width={imageSize}
-          height={imageSize}
-        />
+        <SVG.Logo colorA={colors.background} />
       </S.ImageContainer>
       <Button
         onPress={loginGoogle}
-        icon={
-          () => (
-            <Images
-              name={theme === 'light' ? ImageNames.googleLight : ImageNames.googleDark}
-              width={iconSize}
-              height={iconSize}
-            />
-          )
-        }
-        title={'Entrar'}
+        title={'Logar com Gmail'}
+        iconName='google'
       />
       <View style={{ height: Layout.window.width * 0.04 }}/>
       <Button
@@ -95,16 +54,8 @@ function Home ({ navigation }: RootTabScreenProps<'TabOne'>) {
           await handleGithubSignIn()
         }}
         inverted
-        title={'Login Github'}
-        icon={
-          () => (
-            <Images
-              name={theme === 'light' ? ImageNames.githubLight : ImageNames.githubDark}
-              width={iconSize * 1.2}
-              height={iconSize * 1.2}
-            />
-          )
-        }
+        title={'Logar com Github'}
+        iconName='github'
       />
     </S.OnboardingView>
     )
@@ -129,84 +80,9 @@ function Home ({ navigation }: RootTabScreenProps<'TabOne'>) {
         pagingEnabled
         onScroll={(e) => setScrollViewIndex(e)}
       >
-        {renderPageOne()}
         {renderPageTwo()}
         {renderPageThree()}
       </S.OnboardingScrollView>
-      <View
-        style={
-          {
-            position: 'absolute',
-            alignSelf: 'center',
-            bottom: imageSize * 0.2,
-            flexDirection: 'row',
-            paddingHorizontal: 30
-          }
-        }
-      >
-        <View style={{
-          marginHorizontal: imageSize * 0.03
-        }}>
-          {pageIndex === 0
-            ? (
-              <Images
-                name={theme === 'light' ? ImageNames.menuDotFilledLight : ImageNames.menuDotFilledDark}
-                width={imageSize * 0.05}
-                height={imageSize * 0.05}
-              />
-              )
-            : (
-              <Images
-                name={theme === 'light' ? ImageNames.menuDotLight : ImageNames.menuDotDark}
-                width={imageSize * 0.05}
-                height={imageSize * 0.05}
-              />
-              )
-          }
-        </View>
-
-        <View style={{
-          marginHorizontal: imageSize * 0.03
-        }}>
-          {pageIndex === 1
-            ? (
-              <Images
-                name={theme === 'light' ? ImageNames.menuDotFilledLight : ImageNames.menuDotFilledDark}
-                width={imageSize * 0.05}
-                height={imageSize * 0.05}
-              />
-              )
-            : (
-              <Images
-                name={theme === 'light' ? ImageNames.menuDotLight : ImageNames.menuDotDark}
-                width={imageSize * 0.05}
-                height={imageSize * 0.05}
-              />
-              )
-          }
-        </View>
-
-        <View style={{
-          marginHorizontal: imageSize * 0.03
-        }}>
-          {pageIndex === 2
-            ? (
-                <Images
-                  name={theme === 'light' ? ImageNames.menuDotFilledLight : ImageNames.menuDotFilledDark}
-                  width={imageSize * 0.05}
-                  height={imageSize * 0.05}
-                />
-              )
-            : (
-                <Images
-                  name={theme === 'light' ? ImageNames.menuDotLight : ImageNames.menuDotDark}
-                  width={imageSize * 0.05}
-                  height={imageSize * 0.05}
-                />
-              )
-            }
-        </View>
-      </View>
     </S.Container>
   )
 }

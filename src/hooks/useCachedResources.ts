@@ -15,7 +15,9 @@ export default function useCachedResources () {
         // Load fonts
         await Font.loadAsync({
           ...FontAwesome.font,
-          'fira-bold': require('../assets/fonts/FiraCode-Bold.ttf')
+          'fira-bold': require('../assets/fonts/FiraCode-Bold.ttf'),
+          'fira-medium': require('../assets/fonts/FiraCode-Medium.ttf'),
+          'fira-regular': require('../assets/fonts/FiraCode-Regular.ttf')
         })
       } catch (e) {
         // We might want to provide this error information to an error reporting service
