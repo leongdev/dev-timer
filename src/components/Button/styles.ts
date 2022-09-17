@@ -3,7 +3,7 @@ import Layout from '../../../constants/Layout'
 
 export const ButtonContainer = styled.Pressable`
   background: ${({ theme }) => theme.colors.text};
-  width: 80%;
+  width: 70%;
   align-self: center;
   height: ${Layout.window.width * 0.15}px;
   border-radius: 13px; 
@@ -15,7 +15,7 @@ export const ButtonContainerInverted = styled.Pressable`
   border:  ${({ theme }) => `2px solid ${theme.colors.text}`};
   border-color: ${({ theme }) => theme.colors.text};
   background: ${({ theme }) => theme.colors.background};
-  width: 80%;
+  width: 70%;
   align-self: center;
   height: ${Layout.window.width * 0.15}px;
   border-radius: 13px; 

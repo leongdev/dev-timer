@@ -2,46 +2,39 @@
 import * as S from './styles'
 import * as SVG from '../../components/SvgImages'
 import { RootTabScreenProps } from '../types'
-import { View, useColorScheme } from 'react-native'
+import { View } from 'react-native'
 import Layout from '../../../constants/Layout'
-import Images from '../../components/Images'
-import { ImageNames } from '../../components/Images/images'
-import useResponsive from '../../hooks/useResponsive'
 import Button from '../../components/Button'
 import { useState } from 'react'
 import { handleGithubSignIn, handleGoogleSignIn } from '../../services/auth'
-import { useTheme } from '@react-navigation/native'
+
+import Constants from 'expo-constants'
+import { useTheme } from 'styled-components/native'
+import BottomDots from '../../components/BottomDots'
 
 function Home ({ navigation }: RootTabScreenProps<'TabOne'>) {
   const [pageIndex, setPageIndex] = useState(0)
-  const theme = useColorScheme()
-  const imageSize = useResponsive(8)
-  const iconSize = useResponsive(0.5)
   const { colors } = useTheme()
 
-  const renderPageTwo = () => {
+  const renderPageOne = () => {
     return (
       <S.OnboardingView>
-      <S.ImageContainer>
-        <Images
-          name={theme === 'light' ? ImageNames.imageTwoLight : ImageNames.imageTwoDark}
-          width={imageSize}
-          height={imageSize}
-        />
-        <S.PageTitle>
-         Entre no flow de trabalho e bora pro código!
-        </S.PageTitle>
-      </S.ImageContainer>
-    </S.OnboardingView>
+        <S.ImageContainer>
+          <SVG.OnboardingOne colorA={colors.text} colorB={colors.background}/>
+          <S.PageTitle>
+          Entre no flow de trabalho e bora pro código!
+          </S.PageTitle>
+        </S.ImageContainer>
+      </S.OnboardingView>
     )
   }
 
-  const renderPageThree = (second) => {
+  const renderPageTwo = (second) => {
     return (
     <S.OnboardingView>
-
       <S.ImageContainer>
-        <SVG.Logo colorA={colors.background} />
+        <SVG.Logo colorA={colors.text} />
+        <S.LogoTitle>DEV TIMER</S.LogoTitle>
       </S.ImageContainer>
       <Button
         onPress={loginGoogle}
@@ -57,6 +50,7 @@ function Home ({ navigation }: RootTabScreenProps<'TabOne'>) {
         title={'Logar com Github'}
         iconName='github'
       />
+      <S.AppVersionTitle>V{Constants.manifest?.version}</S.AppVersionTitle>
     </S.OnboardingView>
     )
   }
@@ -80,9 +74,10 @@ function Home ({ navigation }: RootTabScreenProps<'TabOne'>) {
         pagingEnabled
         onScroll={(e) => setScrollViewIndex(e)}
       >
+        {renderPageOne()}
         {renderPageTwo()}
-        {renderPageThree()}
       </S.OnboardingScrollView>
+      <BottomDots dotIndex={pageIndex} />
     </S.Container>
   )
 }

@@ -1,5 +1,6 @@
-import { useTheme } from '@react-navigation/native'
+
 import React, { ReactNode } from 'react'
+import { useTheme } from 'styled-components/native'
 import * as SVG from '../SvgImages'
 import * as S from './styles'
 
@@ -18,11 +19,11 @@ function Button ({ title, inverted, icon, onPress, iconName }: IButton) {
     switch (name) {
       case 'google':
         return (
-          <SVG.IconGoogle colorA={inverted ? colors.background : colors.text} />
+          <SVG.IconGoogle colorA={inverted ? colors.text : colors.background} />
         )
       case 'github':
         return (
-          <SVG.IconGithub colorA={inverted ? colors.background : colors.text} />
+          <SVG.IconGithub colorA={inverted ? colors.text : colors.background} />
         )
     }
   }

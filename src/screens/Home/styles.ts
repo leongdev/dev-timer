@@ -20,7 +20,7 @@ export const OnboardingView = styled.View`
 export const ImageContainer = styled.View`
   align-items: center;
   margin-bottom: ${width * 0.1}px; 
-  margin-top: ${width * 0.3}px; 
+  margin-top: ${width * 0.2}px; 
 `
 
 export const PageTitle = styled.Text`
@@ -30,4 +30,27 @@ export const PageTitle = styled.Text`
   text-align: center; 
   font-size: ${width * 0.06}px;
   color: ${({ theme }) => theme.colors.text}; 
+`
+
+export const LogoTitle = styled.Text`
+  font-family: 'fira-bold'; 
+  width: 80%; 
+  align-self: center;
+  text-align: center; 
+  font-size: ${width * 0.06}px;
+  color: ${({ theme }) => theme.colors.text}; 
+  letter-spacing: 10px;
+  margin-left: 5px;
+  margin-top: 6px
+`
+
+export const AppVersionTitle = styled.Text`
+  font-family: 'fira-regular'; 
+  width: 80%; 
+  align-self: center;
+  text-align: center; 
+  font-size: ${width * 0.04}px;
+  color: ${({ theme }) => theme.colors.text}; 
+  margin-left: 5px;
+  margin-top: 6px
 `
