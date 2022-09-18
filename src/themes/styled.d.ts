@@ -4,6 +4,10 @@ declare module 'styled-components' {
     colors: {
       background: string;
       text: string;
+      gray: string;
+      gray300: string;
+      colorA: string;
+      primary: string;
     }
   }
 }

@@ -1,5 +1,7 @@
+import axios from 'axios'
 import * as AuthSession from 'expo-auth-session'
 import * as WebBrowser from 'expo-web-browser'
+import { GithubAuthProvider, signInWithCredential } from 'firebase/auth'
 WebBrowser.maybeCompleteAuthSession()
 type AuthResponse = {
   params: {
@@ -22,10 +24,28 @@ export async function handleGoogleSignIn () {
     if (type === 'success') {
       const response = await fetch(`https://www.googleapis.com/oauth2/v1/userinfo?alt=json&access_token=${params.access_token}`)
       const user = await response.json()
-      console.log(user)
+      const { id, email, name } = user
+
+      console.log('NAME=> ', name)
+      console.log('ID=> ', id)
+      console.log('EMAIL=> ', email)
+      console.log('PROVIDER=> ', 'google')
+
+      return {
+        name,
+        id,
+        email,
+        provider: 'google'
+      }
     }
   } catch (e) {
     console.log(e)
+    return {
+      name: '',
+      id: '',
+      email: '',
+      provider: ''
+    }
   }
 }
 
@@ -42,9 +62,41 @@ export async function handleGithubSignIn () {
     const { type, params } = await AuthSession.startAsync({ authUrl }) as AuthResponse
 
     if (type === 'success') {
-      console.log('PASSOU', params)
+      const { code } = params
+      const { data } = await axios.post('https://github.com/login/oauth/access_token', {
+        code,
+        client_id: CLIENT_ID,
+        client_secret: CLIENT_SECRET,
+        redirect_url: REDIRECT_URI,
+        Accept: 'application/json'
+      })
+
+      const token = data.split('=')[1].split('&')[0]
+      const response = await fetch('https://api.github.com/user', {
+        headers: {
+          Authorization: `Token ${token}`
+        }
+      })
+
+      const { name, id, email } = await response.json()
+      console.log('NAME=> ', name)
+      console.log('ID=> ', id)
+      console.log('EMAIL=> ', email)
+      console.log('PROVIDER=> ', 'github')
+      return {
+        name,
+        id,
+        email,
+        provider: 'github'
+      }
     }
   } catch (e) {
-    console.log(e)
+    console.log('ERROR GITHUB=> ', e)
+    return {
+      name: '',
+      id: '',
+      email: '',
+      provider: ''
+    }
   }
 }

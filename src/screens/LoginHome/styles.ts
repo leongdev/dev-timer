@@ -32,6 +32,15 @@ export const PageTitle = styled.Text`
   color: ${({ theme }) => theme.colors.text}; 
 `
 
+export const PageSubtitle = styled.Text`
+  font-family: 'fira-medium'; 
+  width: 80%; 
+  align-self: center;
+  text-align: center; 
+  font-size: ${width * 0.05}px;
+  color: ${({ theme }) => theme.colors.text}; 
+`
+
 export const LogoTitle = styled.Text`
   font-family: 'fira-bold'; 
   width: 80%; 

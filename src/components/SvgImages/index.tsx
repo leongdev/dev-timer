@@ -469,3 +469,49 @@ export function IconGithub ({ colorA, width, height }: IIconGithub) {
     </Svg>
   )
 }
+
+interface IIconBack{
+  colorA?: string,
+  width?: number,
+  height?: number
+}
+
+export function IconBack ({ colorA, width, height }: IIconBack) {
+  return (
+    <Svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={width ? `${width}` : '20'}
+      height={height ? `${height}` : '14'}
+      fill="none"
+      viewBox="0 0 21 21"
+    >
+      <Path
+        fill={colorA || '#fff'}
+        d="M1 4.9h10L9.31 1.7l-.03-.22c0-.29.12-.55.32-.74l.77-.74 4.2 4.9c.27.26.43.61.43 1v6.5c0 .77-.7 1.5-1.5 1.5H9.14c-.61 0-1.14-.35-1.34-.85L5.6 8.11 5.47 6.9H1a1 1 0 010-2zm16 9v-8h3v8h-3z"
+      ></Path>
+    </Svg>
+  )
+}
+
+interface IIconAdmin{
+  colorA?: string,
+  width?: number,
+  height?: number
+}
+
+export function IconAdmin ({ colorA, width, height }: IIconAdmin) {
+  return (
+    <Svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={width ? `${width}` : '163'}
+      height={height ? `${height}` : '200'}
+      fill="none"
+      viewBox="0 0 163 200"
+    >
+      <Path
+        fill={colorA || '#000'}
+        d="M81.5 0L163 36.222v54.334c0 50.258-34.773 97.256-81.5 108.666C34.773 187.812 0 140.814 0 90.556V36.222L81.5 0zm36.222 117.722H45.278v13.584c0 2.445 1.72 4.165 4.256 4.527h63.027c2.807 0 4.708-1.449 5.161-3.712v-14.399zm9.056-54.333l-24.179 24.178-21.099-21.1-21.1 21.1L36.223 63.39l9.056 45.278h72.444l9.056-45.278z"
+      ></Path>
+    </Svg>
+  )
+}
