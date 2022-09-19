@@ -61,6 +61,7 @@ export async function handleGithubSignIn () {
 
     const { type, params } = await AuthSession.startAsync({ authUrl }) as AuthResponse
 
+    console.log('TYPE', type)
     if (type === 'success') {
       const { code } = params
       const { data } = await axios.post('https://github.com/login/oauth/access_token', {

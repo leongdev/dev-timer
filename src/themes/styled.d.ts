@@ -8,6 +8,8 @@ declare module 'styled-components' {
       gray300: string;
       colorA: string;
       primary: string;
+      black: string;
+      white: string;
     }
   }
 }

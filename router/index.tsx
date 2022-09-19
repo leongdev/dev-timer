@@ -9,12 +9,17 @@ import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { getHasAuth } from '../src/store/selectors/auth'
 
-import LoginHidden from '../src/screens/LoginHidden'
-import LoginHome from '../src/screens/LoginHome'
-import AppHome from '../src/screens/AppHome/index'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { useTheme } from 'styled-components/native'
 import { MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons'
+
+import LoginHidden from '../src/screens/LoginStack/LoginHidden'
+import LoginHome from '../src/screens/LoginStack/LoginHome'
+
+import AppHome from '../src/screens/AppStack/AppHome/index'
+import AppNoises from '../src/screens/AppStack/AppNoises'
+import AppCharts from '../src/screens/AppStack/AppCharts'
+import AppSettings from '../src/screens/AppStack/AppSettings'
 
 export default function Navigation () {
   const hasAuth = useSelector(getHasAuth)
@@ -66,9 +71,12 @@ function AppStack () {
       initialRouteName="Home"
       screenOptions={{
         tabBarActiveTintColor: colors.primary,
-        tabBarInactiveTintColor: colors.background,
-        tabBarActiveBackgroundColor: colors.text,
-        tabBarInactiveBackgroundColor: colors.text
+        tabBarInactiveTintColor: colors.white,
+        tabBarActiveBackgroundColor: colors.black,
+        tabBarInactiveBackgroundColor: colors.black,
+        tabBarStyle: {
+          backgroundColor: colors.black
+        }
       }}
     >
       <Tab.Screen
@@ -82,7 +90,7 @@ function AppStack () {
       />
       <Tab.Screen
         name="Noises"
-        component={AppHome}
+        component={AppNoises}
         options={{
           headerShown: false,
           tabBarShowLabel: false,
@@ -91,7 +99,7 @@ function AppStack () {
       />
       <Tab.Screen
         name="Charts"
-        component={AppHome}
+        component={AppCharts}
         options={{
           headerShown: false,
           tabBarShowLabel: false,
@@ -100,7 +108,7 @@ function AppStack () {
       />
       <Tab.Screen
         name="Settings"
-        component={AppHome}
+        component={AppSettings}
         options={{
           headerShown: false,
           tabBarShowLabel: false,

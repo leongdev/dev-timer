@@ -5,6 +5,8 @@ export default {
     gray: '#191919',
     gray300: '#161616',
     colorA: '#000000',
-    primary: '#F74B9C'
+    primary: '#F74B9C',
+    black: '#000',
+    white: '#FFF'
   }
 }

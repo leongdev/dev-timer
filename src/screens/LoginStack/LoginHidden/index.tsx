@@ -1,16 +1,16 @@
 
-import { RootTabScreenProps } from '../../../types'
+import { RootTabScreenProps } from '../../../../types'
 import { useTheme } from 'styled-components/native'
-import Button from '../../components/Button'
-import Header from '../../components/Header'
-import SafeContainer from '../../components/SaveContainer'
-import * as SVG from '../../components/SvgImages'
+import Button from '../../../components/Button'
+import Header from '../../../components/Header'
+import SafeContainer from '../../../components/SaveContainer'
+import * as SVG from '../../../components/SvgImages'
 import * as S from './styles'
-import Input from '../../components/Input'
+import Input from '../../../components/Input'
 import { KeyboardAvoidingView, Platform, ScrollView } from 'react-native'
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { authenticateWithEmailPassword } from '../../store/action/auth'
+import { authenticateWithEmailPassword } from '../../../store/action/auth'
 
 function LoginHidden ({ navigation }: RootTabScreenProps) {
   const [loading, setLoading] = useState(false)

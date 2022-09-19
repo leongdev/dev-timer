@@ -1,10 +1,10 @@
 
 import * as S from './styles'
-import * as SVG from '../../components/SvgImages'
+import * as SVG from '../../../components/SvgImages'
 import { RootTabScreenProps } from '../types'
 import { Pressable, View } from 'react-native'
-import Layout from '../../../constants/Layout'
-import Button from '../../components/Button'
+import Layout from '../../../../constants/Layout'
+import Button from '../../../components/Button'
 import { useEffect } from 'react'
 
 import Constants from 'expo-constants'
@@ -12,8 +12,8 @@ import { useTheme } from 'styled-components/native'
 
 import { doc, getDoc } from 'firebase/firestore'
 import { useDispatch } from 'react-redux'
-import { authenticateWithGithub, authenticateWithGoogle } from '../../store/action/auth'
-import SafeContainer from '../../components/SaveContainer'
+import { authenticateWithGithub, authenticateWithGoogle } from '../../../store/action/auth'
+import SafeContainer from '../../../components/SaveContainer'
 
 function LoginHome ({ navigation }: RootTabScreenProps) {
   const { colors } = useTheme()
