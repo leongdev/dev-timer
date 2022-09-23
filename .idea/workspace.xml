@@ -5,25 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="049a26bb-565e-48c0-9a9d-3aaff86c3b74" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/screens/AppStack/AppCharts/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/AppStack/AppNoises/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/AppStack/AppNoises/styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/AppStack/AppSettings/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/AppStack/AppSettings/styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/LoginStack/LoginHidden/styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/DropDown/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/DropDown/styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/selectors/user.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/themes/globalstyles/fonts.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/router/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/router/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/AppHome/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/AppStack/AppHome/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/AppHome/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/AppStack/AppCharts/styles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/LoginHidden/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/LoginStack/LoginHidden/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/LoginHidden/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/AppStack/AppHome/styles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/LoginHome/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/LoginStack/LoginHome/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/LoginHome/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/LoginStack/LoginHome/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/AppStack/AppHome/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/AppStack/AppHome/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/AppStack/AppHome/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/AppStack/AppHome/styles.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/auth/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/auth/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/themes/dark.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/themes/dark.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/themes/light.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/themes/light.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/themes/styled.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/themes/styled.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/types.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/action/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/action/auth.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +72,9 @@
       <workItem from="1663295327003" duration="224000" />
       <workItem from="1663545627324" duration="1878000" />
       <workItem from="1663608291145" duration="2441000" />
+      <workItem from="1663940343216" duration="660000" />
+      <workItem from="1663941018141" duration="3278000" />
+      <workItem from="1663960307161" duration="4355000" />
     </task>
     <servers />
   </component>

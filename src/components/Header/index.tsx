@@ -26,7 +26,7 @@ function Header ({
 
   const renderBackButton = () => {
     return (
-      <TouchableOpacity onPress={() => onPressBack() || null}>
+      <TouchableOpacity onPress={() => onPressBack && onPressBack()}>
         <S.BackContainer>
           <SVG.IconBack height={backIconSize} width={backIconSize} colorA={colors.primary}/>
           <S.BackTitle>Voltar</S.BackTitle>
@@ -41,7 +41,7 @@ function Header ({
       {hasBack && renderBackButton()}
       <S.HeaderTitle>{title}</S.HeaderTitle>
       {subtitle && (<S.HeaderSubtitle>{subtitle}</S.HeaderSubtitle>)}
-      {rightComponent && (<S.RightContainer/>)}
+      <S.RightContainer>{rightComponent}</S.RightContainer>
     </S.Container>
   )
 }

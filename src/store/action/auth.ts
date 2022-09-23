@@ -12,10 +12,10 @@ const authenticateWithGoogle = async (dispatch) => {
   dispatch({
     type: ActionTypes.SIGN_IN,
     payload: {
-      name,
-      id,
-      email,
-      provider
+      userName: name,
+      userId: id,
+      userEmail: email,
+      authProvider: provider
     }
   })
 }
@@ -31,10 +31,10 @@ const authenticateWithGithub = async (dispatch) => {
   dispatch({
     type: ActionTypes.SIGN_IN,
     payload: {
-      name,
-      id,
-      email,
-      provider
+      userName: name,
+      userId: id,
+      userEmail: email,
+      authProvider: provider
     }
   })
 }
@@ -43,10 +43,10 @@ const authenticateWithEmailPassword = async (dispatch) => {
   dispatch({
     type: ActionTypes.SIGN_IN,
     payload: {
-      name: 'Admin',
-      id: '000',
-      email: 'contato@leongdev.com',
-      provider: 'email'
+      userName: 'Admin',
+      userId: '000',
+      userEmail: 'contato@leongdev.com',
+      authProvider: 'email'
     }
   })
 }
@@ -55,10 +55,10 @@ const authenticateLogout = async (dispatch) => {
   dispatch({
     type: ActionTypes.LOG_OUT,
     payload: {
-      name: '',
-      id: '',
-      email: '',
-      provider: ''
+      userName: '',
+      userId: '',
+      userEmail: '',
+      authProvider: ''
     }
   })
 }

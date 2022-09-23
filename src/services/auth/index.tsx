@@ -1,7 +1,7 @@
 import axios from 'axios'
 import * as AuthSession from 'expo-auth-session'
 import * as WebBrowser from 'expo-web-browser'
-import { GithubAuthProvider, signInWithCredential } from 'firebase/auth'
+
 WebBrowser.maybeCompleteAuthSession()
 type AuthResponse = {
   params: {
@@ -10,7 +10,15 @@ type AuthResponse = {
   type: string
 }
 
-export async function handleGoogleSignIn () {
+interface ISignInformation {
+  name: string,
+  email: string,
+  id: string,
+  provider: string
+}
+
+// @ts-ignore
+export async function handleGoogleSignIn (): Promise<ISignInformation> {
   try {
     const CLIENT_ID = '870941080137-5ur4aqokf7qm7j423ogm07nmsrasocos.apps.googleusercontent.com'
     const REDIRECT_URI = 'https://auth.expo.io/@leongdev/dev-timer'
@@ -49,7 +57,8 @@ export async function handleGoogleSignIn () {
   }
 }
 
-export async function handleGithubSignIn () {
+// @ts-ignore
+export async function handleGithubSignIn (): Promise<ISignInformation> {
   try {
     const CLIENT_ID = '6f5c19dfb8e2b7e46099'
     const CLIENT_SECRET = 'a2e9a3f757fac00e3e9cc80c24ecba86f741c5c5'

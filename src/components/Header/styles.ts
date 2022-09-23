@@ -1,5 +1,6 @@
 import styled from 'styled-components/native'
 import Layout from '../../../constants/Layout'
+import * as Fonts from '../../themes/globalstyles/fonts'
 
 const { width } = Layout.window
 
@@ -22,17 +23,15 @@ export const BottomLine = styled.View`
 
 export const HeaderTitle = styled.Text`
   color: ${({ theme }) => theme.colors.text};
-  font-size: ${width * 0.08}px;
-  font-family: 'fira-bold';
-  margin-left: 10px;
+  margin-left: 10px; 
+  ${Fonts.Title} 
 `
 
 export const HeaderSubtitle = styled.Text`
   color: ${({ theme }) => theme.colors.text};
-  font-size: ${width * 0.04}px;
-  font-family: 'fira-regular';
   margin-left: 10px;
   margin-bottom: 5px;
+  ${Fonts.Subtitle}
 `
 
 export const BackTitle = styled.Text`
@@ -53,7 +52,6 @@ export const RightContainer = styled.View`
   height: 100%;
   position: absolute;
   right: 0;
-  background: red;
   align-items: center;
   justify-content: center;
 `
