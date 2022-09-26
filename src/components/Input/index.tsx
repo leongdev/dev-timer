@@ -4,15 +4,24 @@ import * as S from './styles'
 
 interface IInput {
   placeholder: string,
-  changedText: ()=> string,
+  onChangedText: (text: string)=> void,
   errorMessage?: string,
   isPassword?: boolean,
+  isFullWidth?: boolean
 }
 
-const Input = ({ placeholder, changedText, errorMessage, isPassword }: IInput) => {
+const Input = ({
+  placeholder,
+  onChangedText,
+  errorMessage,
+  isPassword,
+  isFullWidth
+}: IInput) => {
   const [value, setValue] = useState('')
   return (
-    <S.InputContainer>
+    <S.InputContainer
+      isFullWidth={isFullWidth}
+    >
       <S.InputField
         secureTextEntry={isPassword || false}
         placeholder={placeholder}
@@ -20,7 +29,7 @@ const Input = ({ placeholder, changedText, errorMessage, isPassword }: IInput) =
         value={value}
         onChangeText={(text) => {
           setValue(text)
-          changedText(text)
+          onChangedText(text)
         }}
       />
       {errorMessage && (<S.ErrorTitle>{errorMessage}</S.ErrorTitle>)}

@@ -3,7 +3,7 @@ import Layout from '../../../constants/Layout'
 
 export const InputContainer = styled.SafeAreaView`
   background: ${({ theme }) => theme.colors.gray300} ; 
-  width: 87%;
+  width: ${(props) => props.isFullWidth ? '100%' : '87%'};
   height: ${Layout.window.width * 0.15}px;
   align-self: center;
   border-radius: 13px;

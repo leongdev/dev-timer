@@ -15,9 +15,21 @@ interface IButton {
   onPress?: ()=> void,
   loading?: boolean,
   loadingColor?: string,
+  isFullWidth?: boolean
 }
 
-function Button ({ spaceBetween, iconRight, title, inverted, icon, onPress, iconName, loading, loadingColor }: IButton) {
+function Button ({
+  spaceBetween,
+  iconRight,
+  title,
+  inverted,
+  icon,
+  onPress,
+  iconName,
+  loading,
+  loadingColor,
+  isFullWidth
+}: IButton) {
   const { colors } = useTheme()
 
   const renderIconName = (name: string, inverted: boolean) => {
@@ -36,6 +48,7 @@ function Button ({ spaceBetween, iconRight, title, inverted, icon, onPress, icon
   if (inverted) {
     return (
     <S.ButtonContainerInverted
+      isFullWidth={isFullWidth}
       spaceBetween={spaceBetween}
       onPress={() => onPress && onPress()}
       style={({ pressed }) => [{
@@ -59,6 +72,7 @@ function Button ({ spaceBetween, iconRight, title, inverted, icon, onPress, icon
 
   return (
     <S.ButtonContainer
+      isFullWidth={isFullWidth}
       spaceBetween={spaceBetween}
       onPress={() => onPress && onPress()}
       style={({ pressed }) => [{

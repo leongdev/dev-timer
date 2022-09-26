@@ -64,12 +64,12 @@ function LoginHidden ({ navigation }: RootTabScreenProps) {
           <Input
             errorMessage={loginError}
             placeholder='Email'
-            changedText={(text) => { setLogin(text) }}
+            onChangedText={(text) => { setLogin(text) }}
           />
           <Input
             errorMessage={passwordError}
             placeholder='Senha'
-            changedText={(text) => { setPassword(text) }}
+            onChangedText={(text) => { setPassword(text) }}
             isPassword
           />
           <Button
