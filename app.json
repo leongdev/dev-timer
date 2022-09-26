@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Dev Timer", 
+    "name": "Dev Timer",
     "slug": "dev-timer",
     "scheme": "dev-timer",
     "version": "1.0.0",
@@ -24,16 +24,16 @@
       "**/*"
     ],
     "ios": {
-      "buildNumber": "2",
+      "buildNumber": "3",
       "bundleIdentifier": "com.leongdev.devtimer",
       "supportsTablet": true,
       "usesAppleSignIn": true
     },
     "android": {
-      "versionCode": 2,  
+      "versionCode": 3,
       "adaptiveIcon": {
         "foregroundImage": "./src/assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff" 
+        "backgroundColor": "#ffffff"
       },
       "package": "com.leongdev.devtimer"
     },

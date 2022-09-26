@@ -21,6 +21,11 @@ import AppNoises from '../src/screens/AppStack/AppNoises'
 import AppCharts from '../src/screens/AppStack/AppCharts'
 import AppSettings from '../src/screens/AppStack/AppSettings'
 
+import SettingsProjects from '../src/screens/SettingsStrack/SettingsProjects'
+import SettingsFreelanceCalculator from '../src/screens/SettingsStrack/SettingsFreelanceCalculator'
+import SettingsTimer from '../src/screens/SettingsStrack/SettingsTimer'
+import SettingsThemes from '../src/screens/SettingsStrack/SettingsThemes'
+
 export default function Navigation () {
   const hasAuth = useSelector(getHasAuth)
   const [logged, setLogged] = useState(hasAuth)
@@ -57,6 +62,20 @@ function LoginStack () {
     >
       <Stack.Screen name="LoginHome" component={LoginHome} options={{ headerShown: false }} />
       <Stack.Screen name="LoginHidden" component={LoginHidden} options={{ headerShown: false }} />
+    </Stack.Navigator>
+  )
+}
+
+function SettingsStack () {
+  return (
+    <Stack.Navigator
+      initialRouteName="AppSettings"
+    >
+      <Stack.Screen name="AppSettings" component={AppSettings} options={{ headerShown: false }} />
+      <Stack.Screen name="Projects" component={SettingsProjects} options={{ headerShown: false }} />
+      <Stack.Screen name="Freelancer" component={SettingsFreelanceCalculator} options={{ headerShown: false }} />
+      <Stack.Screen name="Timer" component={SettingsTimer} options={{ headerShown: false }} />
+      <Stack.Screen name="Themes" component={SettingsThemes} options={{ headerShown: false }} />
     </Stack.Navigator>
   )
 }
@@ -108,7 +127,7 @@ function AppStack () {
       />
       <Tab.Screen
         name="Settings"
-        component={AppSettings}
+        component={SettingsStack}
         options={{
           headerShown: false,
           tabBarShowLabel: false,

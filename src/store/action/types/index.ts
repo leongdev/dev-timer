@@ -1,7 +1,16 @@
 const SIGN_IN = 'SIGN_IN'
 const LOG_OUT = 'LOG_OUT'
+const DELETE_ACCOUNT = 'DELETE_ACCOUNT'
+
+const PLAY_SOUND = 'PLAY_SOUND'
+const PAUSE_SOUND = 'PAUSE_SOUND'
+const STOP_SOUND = 'STOP_SOUND'
 
 export const ActionTypes = {
   SIGN_IN,
-  LOG_OUT
+  LOG_OUT,
+  DELETE_ACCOUNT,
+  PLAY_SOUND,
+  PAUSE_SOUND,
+  STOP_SOUND
 }

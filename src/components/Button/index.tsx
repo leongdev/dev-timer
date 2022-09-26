@@ -1,5 +1,5 @@
 
-import React, { ReactNode } from 'react'
+import React from 'react'
 import { ActivityIndicator } from 'react-native'
 import { useTheme } from 'styled-components/native'
 import * as SVG from '../SvgImages'
@@ -8,14 +8,16 @@ import * as S from './styles'
 interface IButton {
   title: string,
   inverted?: boolean,
-  icon?: ReactNode,
+  icon?: ()=> JSX.Element,
+  iconRight?: ()=> JSX.Element,
+  spaceBetween?: boolean,
   iconName?: 'google' | 'github',
   onPress?: ()=> void,
   loading?: boolean,
   loadingColor?: string,
 }
 
-function Button ({ title, inverted, icon, onPress, iconName, loading, loadingColor }: IButton) {
+function Button ({ spaceBetween, iconRight, title, inverted, icon, onPress, iconName, loading, loadingColor }: IButton) {
   const { colors } = useTheme()
 
   const renderIconName = (name: string, inverted: boolean) => {
@@ -33,22 +35,35 @@ function Button ({ title, inverted, icon, onPress, iconName, loading, loadingCol
 
   if (inverted) {
     return (
-    <S.ButtonContainerInverted onPress={() => onPress && onPress()} style={({ pressed }) => [{
-      opacity: pressed ? 0.4 : 1
-    }]}>
+    <S.ButtonContainerInverted
+      spaceBetween={spaceBetween}
+      onPress={() => onPress && onPress()}
+      style={({ pressed }) => [{
+        opacity: pressed ? 0.4 : 1
+      }]}>
       {icon && icon()}
       {iconName && renderIconName(iconName, inverted)}
-      <S.ButtonTextInverted>
+      <S.ButtonTextInverted
+        spaceBetween={spaceBetween}
+      >
         {title}
       </S.ButtonTextInverted>
+      <S.RightContainer
+        spaceBetween={spaceBetween}
+      >
+        {iconRight && iconRight()}
+      </S.RightContainer>
     </S.ButtonContainerInverted>
     )
   }
 
   return (
-    <S.ButtonContainer onPress={() => onPress && onPress()} style={({ pressed }) => [{
-      opacity: pressed ? 0.4 : 1
-    }]}>
+    <S.ButtonContainer
+      spaceBetween={spaceBetween}
+      onPress={() => onPress && onPress()}
+      style={({ pressed }) => [{
+        opacity: pressed ? 0.4 : 1
+      }]}>
       {loading
         ? (
         <ActivityIndicator
@@ -59,9 +74,16 @@ function Button ({ title, inverted, icon, onPress, iconName, loading, loadingCol
           <>
             {icon && icon()}
             {iconName && renderIconName(iconName, inverted)}
-            <S.ButtonText>
+            <S.ButtonText
+              spaceBetween={spaceBetween}
+            >
               {title}
             </S.ButtonText>
+            <S.RightContainer
+              spaceBetween={spaceBetween}
+            >
+              {iconRight && iconRight()}
+            </S.RightContainer>
           </>
           )
       }

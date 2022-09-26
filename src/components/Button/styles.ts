@@ -8,7 +8,7 @@ export const ButtonContainer = styled.Pressable`
   height: ${Layout.window.width * 0.15}px;
   border-radius: 13px; 
   align-items: center;
-  justify-content: center;
+  justify-content: ${({ spaceBetween }) => spaceBetween ? 'space-between' : 'center'};
   flex-direction: row;
 `
 export const ButtonContainerInverted = styled.Pressable`
@@ -20,20 +20,24 @@ export const ButtonContainerInverted = styled.Pressable`
   height: ${Layout.window.width * 0.15}px;
   border-radius: 13px; 
   align-items: center;
-  justify-content: center;
+  justify-content: ${({ spaceBetween }) => spaceBetween ? 'space-between' : 'center'};
   flex-direction: row;
 `
 
 export const ButtonText = styled.Text`
-  font-family: 'fira-medium';
+  font-family: ${'fira-medium'};
   font-size: ${Layout.window.width * 0.05}px;
   color: ${({ theme }) => theme.colors.background};
-  margin-left: 10px;
+  margin-left: ${({ spaceBetween }) => spaceBetween ? 20 : 10}px;
 `
 
 export const ButtonTextInverted = styled.Text`
-  font-family: 'fira-medium';
+  font-family: ${'fira-medium'};
   font-size: ${Layout.window.width * 0.05}px;
   color: ${({ theme }) => theme.colors.text};
-  margin-left: 10px;
+  margin-left: ${({ spaceBetween }) => spaceBetween ? 20 : 10}px;
+`
+
+export const RightContainer = styled.View`
+  margin-right: ${({ spaceBetween }) => spaceBetween ? 20 : 0}px;
 `

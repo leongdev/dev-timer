@@ -4,18 +4,55 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="049a26bb-565e-48c0-9a9d-3aaff86c3b74" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/DropDown/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/DropDown/styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/selectors/user.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/themes/globalstyles/fonts.ts" afterDir="false" />
+    <list default="true" id="049a26bb-565e-48c0-9a9d-3aaff86c3b74" name="Changes" comment="Last Update">
+      <change afterPath="$PROJECT_DIR$/src/assets/animations/files/circle_animation_3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/animations/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/sounds/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/NoiseButton/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/NoiseButton/styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SoundBar/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SoundBar/styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/SettingsStrack/SettingsFreelanceCalculator/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/SettingsStrack/SettingsFreelanceCalculator/styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/SettingsStrack/SettingsProjects/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/SettingsStrack/SettingsProjects/styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/SettingsStrack/SettingsThemes/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/SettingsStrack/SettingsThemes/styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/SettingsStrack/SettingsTimer/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/SettingsStrack/SettingsTimer/styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/action/sounds.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/reducers/sounds.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/selectors/sounds.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/router/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/animations/after/ANIMATION.aep" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/animations/after/ANIMATION.aep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/animations/after/Group 3.ai" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/animations/after/Group 3.ai" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/animations/after/Group 3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/animations/after/Group 3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/animations/after/Group 3.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/animations/after/Group 3.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/animations/files/circle_animation_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/animations/files/circle_animation_1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/animations/files/circle_animation_2.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/animations/files/circle_animation_2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/animations/files/circle_animation_3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DropDown/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DropDown/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SvgImages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SvgImages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/AppStack/AppCharts/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/AppStack/AppCharts/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/AppStack/AppCharts/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/AppStack/AppCharts/styles.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/AppStack/AppHome/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/AppStack/AppHome/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/AppStack/AppHome/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/AppStack/AppHome/styles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/auth/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/auth/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/action/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/action/auth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/AppStack/AppNoises/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/AppStack/AppNoises/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/AppStack/AppNoises/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/AppStack/AppNoises/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/AppStack/AppSettings/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/AppStack/AppSettings/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/AppStack/AppSettings/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/AppStack/AppSettings/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/Timer/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/Timer/styles.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/action/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/action/types/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/globalstyles/fonts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/themes/globalstyles/fonts.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/types.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/types.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +62,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -33,32 +73,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/leongdev/Developer/dev-timer/src/screens&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/leongdev/Developer/dev-timer/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/leongdev/Developer/dev-timer/src/screens/AppStack/SettingsStrack",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "settings.editor.selected.configurable": "editing.templates",
+    "ts.external.directory.path": "/Users/leongdev/Developer/dev-timer/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/screens/AppStack/SettingsStrack" />
+      <recent name="$PROJECT_DIR$/src/screens/SettingsStrack" />
       <recent name="$PROJECT_DIR$/src/screens" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/screens/LoginStack" />
+      <recent name="$PROJECT_DIR$/src/screens" />
       <recent name="$PROJECT_DIR$/src/screens/AppStack" />
-      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/screens/AppStack/SettingsStrack" />
+      <recent name="$PROJECT_DIR$/src/assets" />
+      <recent name="$PROJECT_DIR$/src/animations/after" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -74,8 +118,18 @@
       <workItem from="1663608291145" duration="2441000" />
       <workItem from="1663940343216" duration="660000" />
       <workItem from="1663941018141" duration="3278000" />
-      <workItem from="1663960307161" duration="4355000" />
+      <workItem from="1663960307161" duration="6015000" />
+      <workItem from="1663974473912" duration="4690000" />
+      <workItem from="1664115664004" duration="22811000" />
     </task>
+    <task id="LOCAL-00001" summary="Last Update">
+      <created>1663972925967</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1663972925967</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -91,5 +145,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Last Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Last Update" />
   </component>
 </project>

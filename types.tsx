@@ -11,6 +11,11 @@ export type RootStackParamList = {
   LoginHome: undefined;
   LoginHidden: undefined;
   NotFound: undefined;
+  AppSettings: undefined;
+  Projects: undefined;
+  Themes: undefined;
+  Timer: undefined;
+  Freelancer: undefined;
 };
 
 export type RootTabParamList = {

@@ -10,7 +10,6 @@ interface ILogo{
 export function Logo ({ colorA, width, height }: ILogo) {
   return (
     <Svg
-      xmlns="http://www.w3.org/2000/svg"
       width={width ? `${width}` : '209'}
       height={height ? `${height}` : '228'}
       fill="none"
@@ -44,7 +43,6 @@ interface IOnboardingOne {
 export function OnboardingOne ({ colorA, colorB, width, height }: IOnboardingOne) {
   return (
     <Svg
-      xmlns="http://www.w3.org/2000/svg"
       width={width ? `${width}` : '236'}
       height={height ? `${height}` : '393'}
       fill="none"
@@ -383,7 +381,6 @@ interface IQuoteClose{
 export function QuoteClose ({ colorA, width, height }: IQuoteClose) {
   return (
     <Svg
-      xmlns="http://www.w3.org/2000/svg"
       width={width ? `${width}` : '41'}
       height={height ? `${height}` : '24'}
       fill="none"
@@ -408,7 +405,6 @@ interface IQuoteOpened{
 export function QuoteOpened ({ colorA, width, height }: IQuoteOpened) {
   return (
     <Svg
-      xmlns="http://www.w3.org/2000/svg"
       width={width ? `${width}` : '41'}
       height={height ? `${height}` : '24'}
       fill="none"
@@ -433,7 +429,6 @@ interface IIconGoogle{
 export function IconGoogle ({ colorA, width, height }: IIconGoogle) {
   return (
     <Svg
-      xmlns="http://www.w3.org/2000/svg"
       width={width ? `${width}` : '18'}
       height={height ? `${height}` : '19'}
       fill="none"
@@ -456,7 +451,6 @@ interface IIconGithub{
 export function IconGithub ({ colorA, width, height }: IIconGithub) {
   return (
     <Svg
-      xmlns="http://www.w3.org/2000/svg"
       width={width ? `${width}` : '21'}
       height={height ? `${height}` : '21'}
       fill="none"
@@ -479,7 +473,6 @@ interface IIconBack{
 export function IconBack ({ colorA, width, height }: IIconBack) {
   return (
     <Svg
-      xmlns="http://www.w3.org/2000/svg"
       width={width ? `${width}` : '20'}
       height={height ? `${height}` : '14'}
       fill="none"
@@ -502,7 +495,6 @@ interface IIconAdmin{
 export function IconAdmin ({ colorA, width, height }: IIconAdmin) {
   return (
     <Svg
-      xmlns="http://www.w3.org/2000/svg"
       width={width ? `${width}` : '163'}
       height={height ? `${height}` : '200'}
       fill="none"
@@ -511,6 +503,28 @@ export function IconAdmin ({ colorA, width, height }: IIconAdmin) {
       <Path
         fill={colorA || '#000'}
         d="M81.5 0L163 36.222v54.334c0 50.258-34.773 97.256-81.5 108.666C34.773 187.812 0 140.814 0 90.556V36.222L81.5 0zm36.222 117.722H45.278v13.584c0 2.445 1.72 4.165 4.256 4.527h63.027c2.807 0 4.708-1.449 5.161-3.712v-14.399zm9.056-54.333l-24.179 24.178-21.099-21.1-21.1 21.1L36.223 63.39l9.056 45.278h72.444l9.056-45.278z"
+      ></Path>
+    </Svg>
+  )
+}
+
+interface IIconPlayer{
+  colorA?: string,
+  width?: number,
+  height?: number
+}
+
+export function IconPlayer ({ colorA, width, height }: IIconPlayer) {
+  return (
+    <Svg
+      width={width ? `${width}` : '163'}
+      height={height ? `${height}` : '200'}
+      fill="none"
+      viewBox="0 0 93 84"
+    >
+      <Path
+        fill={colorA || '#000'}
+        d="M9.334 11.416L.606 68.44C-.95 78.611 9.366 86.474 18.761 82.275l65.751-29.384c10.088-4.509 10.309-18.748.366-23.567L27.855 1.684c-7.876-3.816-17.197 1.081-18.52 9.732z"
       ></Path>
     </Svg>
   )

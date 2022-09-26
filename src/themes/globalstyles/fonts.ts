@@ -9,7 +9,7 @@ export const Title = `
 
 export const Title2 = `
   font-family: ${'fira-bold'};
-  font-size: ${width * 0.05}px;
+  font-size: ${width * 0.04}px;
 `
 
 export const Subtitle = `
