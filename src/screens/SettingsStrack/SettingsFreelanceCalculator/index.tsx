@@ -26,8 +26,6 @@ function SettingsFreelanceCalculator ({ navigation }: RootTabScreenProps<any>) {
     if (earnPerMoth && hoursPerDay && weekWorkDays) dispatch(setUserMoneyPreferences(earnPerMoth, hoursPerDay, weekWorkDays))
   }
 
-  console.log('TOMAR NO CU =>', userMoneyInfo.pricePerHour)
-
   return (
     <SafeContainer>
       <Header

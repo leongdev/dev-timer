@@ -20,6 +20,8 @@ import { getCurrentSound } from '../../../store/selectors/sounds'
 import SoundBar from '../../../components/SoundBar'
 import BaseModal from '../../../components/BaseModal'
 import { saveProjectTime } from '../../../store/action/projects'
+import Button from '../../../components/Button'
+import { MaterialCommunityIcons } from '@expo/vector-icons'
 
 function AppHome ({ navigation }: RootTabScreenProps<any>) {
   const { currentSound } = useSelector(getCurrentSound)
@@ -40,7 +42,7 @@ function AppHome ({ navigation }: RootTabScreenProps<any>) {
   const { colors } = useTheme()
 
   const circleMargin = useResponsive(0.02)
-
+  const iconSize = useResponsive(0.8)
   const circleAnimation = useRef<LottieView>(null)
 
   const minutes = useMemo(() => Math.floor(count / 60), [count])
@@ -105,11 +107,25 @@ function AppHome ({ navigation }: RootTabScreenProps<any>) {
         subtitle='bora pro código!'
         rightComponent={<DropDown />}
       />
+  {/*     <Button
+        inverted
+        spaceBetween
+        iconRight={() =>
+          <MaterialCommunityIcons
+            size={iconSize}
+            color={colors.text}
+            name={'chevron-right'}
+          />
+        }
 
+        title={'Me compre um café ☕️❤️'}
+        onPress={() => {
+
+        }}
+      /> */}
       <S.Timer
         playingSound={currentSound.name}
       >
-
         <LottieView
           ref={circleAnimation}
           key={1}

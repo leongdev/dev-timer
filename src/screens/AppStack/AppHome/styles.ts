@@ -45,7 +45,7 @@ export const CloseQuoteContainer = styled.View`
 export const Timer = styled.View`
   width: 100%;
   height: ${width * 0.85}px; 
-  margin-top: ${({ playingSound }) => playingSound ? width * 0.25 : width * 0.3}px;
+  margin-top: ${({ playingSound }) => playingSound ? width * 0.28 : width * 0.2}px;
   align-items: center;
   justify-content: center;
 `

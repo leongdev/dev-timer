@@ -91,6 +91,7 @@ function AppSettings ({ navigation }: RootTabScreenProps<any>) {
             navigation.navigate('Themes')
           }}
         />
+        <S.LineSpace/>
       </S.Container>
       <Button
         title={'Sair'}
