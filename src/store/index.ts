@@ -8,7 +8,10 @@ const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
   whitelist: [
-    'auth'
+    'auth',
+    'theme',
+    'projects',
+    'user'
   ]
 }
 

@@ -1,34 +1,36 @@
 
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 import SafeContainer from '../../../components/SaveContainer'
 import Header from '../../../components/Header'
 import { RootTabScreenProps } from '../../../../types'
-import { getUserInformation } from '../../../store/selectors/user'
+import { getTimerPreferences, getUserInformation } from '../../../store/selectors/user'
 import * as S from './styles'
 import { IconPlayer, QuoteClose, QuoteOpened } from '../../../components/SvgImages'
 import DropDown from '../../../components/DropDown'
 import LottieView from 'lottie-react-native'
 
 import { useTheme } from 'styled-components/native'
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import useResponsive from '../../../hooks/useResponsive'
 import Animations from '../../../assets/animations'
 import Layout from '../../../../constants/Layout'
 import quotesData from '../../../../data/quotes'
 import { getCurrentSound } from '../../../store/selectors/sounds'
 import SoundBar from '../../../components/SoundBar'
-
-const INITIAL_TIME_IN_SECONDS = 50 * 60 // 25 minutes
+import BaseModal from '../../../components/BaseModal'
+import { saveProjectTime } from '../../../store/action/projects'
 
 function AppHome ({ navigation }: RootTabScreenProps<any>) {
   const { currentSound } = useSelector(getCurrentSound)
-
+  const [showStopModal, setShowStopModal] = useState(false)
+  const [showQuoteModal, setQuoteModal] = useState(false)
   const [animation, setAnimation] = useState(Animations.circle_2)
   const [isPlaying, setPlaying] = useState(false)
   const [showPause, setShowPause] = useState(false)
-
-  const [count, setCount] = useState(INITIAL_TIME_IN_SECONDS)
+  const initialTimer = useSelector(getTimerPreferences)
+  const timerSettings = initialTimer > 0 ? initialTimer * 60 : 60 * 60
+  const [count, setCount] = useState(timerSettings)
 
   const [quote, setQuote] = useState(quotesData[0])
 
@@ -44,6 +46,8 @@ function AppHome ({ navigation }: RootTabScreenProps<any>) {
   const minutes = useMemo(() => Math.floor(count / 60), [count])
   const seconds = useMemo(() => count % 60, [count])
 
+  const dispatch = useDispatch()
+
   useEffect(() => {
     if (isPlaying) {
       const interval = setInterval(() => {
@@ -51,6 +55,8 @@ function AppHome ({ navigation }: RootTabScreenProps<any>) {
       }, 1000)
 
       if (count === 0) {
+        setQuoteModal(true)
+        saveTimeToSelectedProject(true)
         onPressPause()
       }
 
@@ -76,7 +82,7 @@ function AppHome ({ navigation }: RootTabScreenProps<any>) {
     setAnimation(Animations.circle_2)
     setShowPause(false)
     setPlaying(false)
-    setCount(INITIAL_TIME_IN_SECONDS)
+    setCount(timerSettings)
     setTimeout(() => {
       setPlaying(false)
     }, 400)
@@ -88,25 +94,17 @@ function AppHome ({ navigation }: RootTabScreenProps<any>) {
     setQuote(quotesData[Math.floor(Math.random() * (maximum - minimum + 1)) + minimum])
   }
 
+  const saveTimeToSelectedProject = (completed: boolean) => {
+    dispatch(saveProjectTime(count, completed))
+  }
+
   return (
     <SafeContainer>
       <Header
         title={userInformation.userName}
         subtitle='bora pro código!'
-        rightComponent={<DropDown title={'Projects'}/>}
+        rightComponent={<DropDown />}
       />
-
-{/*
-      <S.QuoteContainer>
-        <S.OpenQuoteContainer>
-          <QuoteOpened/>
-        </S.OpenQuoteContainer>
-        <S.QuoteText>{quote.quote} {'\n'} ( {quote.author} )</S.QuoteText>
-        <S.CloseQuoteContainer>
-          <QuoteClose/>
-        </S.CloseQuoteContainer>
-      </S.QuoteContainer>
-*/}
 
       <S.Timer
         playingSound={currentSound.name}
@@ -162,7 +160,7 @@ function AppHome ({ navigation }: RootTabScreenProps<any>) {
         }
 
         {showPause && (
-          <S.PauseContainer onPress={onPressPause} >
+          <S.PauseContainer onPress={ () => setShowStopModal(true)} >
             <S.Pause/>
           </S.PauseContainer>
         )}
@@ -176,6 +174,40 @@ function AppHome ({ navigation }: RootTabScreenProps<any>) {
 
       </S.Timer>
       {currentSound.name && (<SoundBar/>)}
+      <BaseModal
+        onPressBackdrop={() => setQuoteModal(false)}
+        isVisible={showQuoteModal}
+      >
+        <S.QuoteContainer>
+          <S.OpenQuoteContainer>
+            <QuoteOpened/>
+          </S.OpenQuoteContainer>
+          <S.QuoteText>{quote.quote} {'\n'} ( {quote.author} )</S.QuoteText>
+          <S.CloseQuoteContainer>
+            <QuoteClose/>
+          </S.CloseQuoteContainer>
+        </S.QuoteContainer>
+      </BaseModal>
+
+      <BaseModal
+        isVisible={showStopModal}
+        onPressBackdrop={() => setShowStopModal(false)}
+        content={{
+          title: 'Salvar Tempo',
+          description: 'Deseja salvar o tempo que passou?',
+          leftButtonTitle: 'Não',
+          rightButtonTitle: 'Sim',
+          onPressLeft: () => {
+            setShowStopModal(false)
+            saveTimeToSelectedProject(false)
+            onPressPause()
+          },
+          onPressRight: () => {
+            setShowStopModal(false)
+            onPressPause()
+          }
+        }}
+      />
     </SafeContainer>
   )
 }

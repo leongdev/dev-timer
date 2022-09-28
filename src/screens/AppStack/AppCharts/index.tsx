@@ -1,6 +1,5 @@
 
-import { useTheme } from 'styled-components/native'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 
 import SafeContainer from '../../../components/SaveContainer'
 import Header from '../../../components/Header'
@@ -9,37 +8,75 @@ import { getCurrentSound } from '../../../store/selectors/sounds'
 import SoundBar from '../../../components/SoundBar'
 import DropDown from '../../../components/DropDown'
 import * as S from './styles'
+import InfoCard from '../../../components/InfoCard'
+import {
+  getFinishedIntervals,
+  getNoFinishedIntervals,
+  getTotalMoney,
+  getTotalTime
+} from '../../../store/selectors/projects'
 
 function AppCharts ({ navigation }: RootTabScreenProps<any>) {
   const { currentSound } = useSelector(getCurrentSound)
-  const { colors } = useTheme()
+  const finishedIntervals = useSelector(getFinishedIntervals)
+  const noFinishedIntervals = useSelector(getNoFinishedIntervals)
+  const getMoney = useSelector(getTotalMoney)
+  const totalTime = useSelector(getTotalTime)
 
-  const dispatch = useDispatch()
+  function secondsToHms (d: number) {
+    d = Number(Math.abs(d))
+    const h = Math.floor(d / 3600)
+    const m = Math.floor(d % 3600 / 60)
+    const s = Math.floor(d % 3600 % 60)
+
+    let hDisplay = h > 0 ? h + (h === 1 ? '' : '') : '00'
+    let mDisplay = m > 0 ? m + (m === 1 ? '' : '') : '00'
+    let sDisplay = s > 0 ? s + (s === 1 ? '' : '') : '00'
+
+    if (sDisplay < 10 && sDisplay > 0) {
+      sDisplay = `0${sDisplay}`
+    }
+
+    if (mDisplay < 10 && mDisplay > 0) {
+      mDisplay = `0${mDisplay}`
+    }
+
+    if (hDisplay < 10 && hDisplay > 0) {
+      hDisplay = `0${hDisplay}`
+    }
+
+    return `${hDisplay}:${mDisplay}:${sDisplay}`
+  }
+
+  const formater = new Intl.NumberFormat('pt-BR', {
+    style: 'currency',
+    currency: 'BRL'
+  })
 
   return (
     <SafeContainer>
       <Header
         title='Tempo'
         subtitle={'gasto no app'}
-        rightComponent={<DropDown title={'Todos'}/>}
+        rightComponent={<DropDown />}
       />
       <S.TimeContainer>
         <S.TimeItemContainer>
           <S.TimeTitleText>Intervalos finalizados</S.TimeTitleText>
           <S.TimeValueContainer>
-            <S.TimeValueText>300</S.TimeValueText>
+            <S.TimeValueText>{finishedIntervals}</S.TimeValueText>
           </S.TimeValueContainer>
         </S.TimeItemContainer>
         <S.TimeItemContainer>
           <S.TimeTitleText>Intervalos não finalizados</S.TimeTitleText>
           <S.TimeValueContainer>
-            <S.TimeValueText>300</S.TimeValueText>
+            <S.TimeValueText>{noFinishedIntervals}</S.TimeValueText>
           </S.TimeValueContainer>
         </S.TimeItemContainer>
         <S.TimeItemContainer>
           <S.TimeTitleText>Duração de trabalho</S.TimeTitleText>
           <S.TimeValueContainer>
-            <S.TimeValueText>10:00:00</S.TimeValueText>
+            <S.TimeValueText>{secondsToHms(totalTime)}</S.TimeValueText>
           </S.TimeValueContainer>
         </S.TimeItemContainer>
       </S.TimeContainer>
@@ -47,9 +84,7 @@ function AppCharts ({ navigation }: RootTabScreenProps<any>) {
         title='Dinheiro'
         subtitle={'que ganhou codando'}
       />
-      <S.MoneyDisplayContainer>
-        <S.MoneyValueText>R$ 1.000,00</S.MoneyValueText>
-      </S.MoneyDisplayContainer>
+      <InfoCard text={getMoney > 0 ? `${formater.format(getMoney)}` : 'R$0.0'} />
   <S.MoneyContainer/>
       {currentSound.name && (<SoundBar/>)}
     </SafeContainer>

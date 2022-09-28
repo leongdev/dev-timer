@@ -22,9 +22,15 @@ export const Label1 = `
   font-size: ${width * 0.04}px;
 `
 
+export const Label2 = `
+  font-family: ${'fira-regular'};
+  font-size: ${width * 0.03}px;
+`
+
 export default {
   Title,
   Title2,
   Subtitle,
-  Label1
+  Label1,
+  Label2
 }

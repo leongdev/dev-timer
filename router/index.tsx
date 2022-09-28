@@ -25,27 +25,47 @@ import SettingsProjects from '../src/screens/SettingsStrack/SettingsProjects'
 import SettingsFreelanceCalculator from '../src/screens/SettingsStrack/SettingsFreelanceCalculator'
 import SettingsTimer from '../src/screens/SettingsStrack/SettingsTimer'
 import SettingsThemes from '../src/screens/SettingsStrack/SettingsThemes'
+import { ThemeProvider } from 'styled-components'
+import themes from '../src/themes'
+import { StatusBar } from 'expo-status-bar'
+import { getCurrentPrimaryColor, getCurrentTheme } from '../src/store/selectors/theme'
 
 export default function Navigation () {
   const hasAuth = useSelector(getHasAuth)
+  const primaryColor = useSelector(getCurrentPrimaryColor)
+  const reduxTheme: string = useSelector(getCurrentTheme)
+
   const [logged, setLogged] = useState(hasAuth)
+
+  const theme = themes[reduxTheme] || themes.light
+  const processedTheme = {
+    ...theme,
+    colors: {
+      ...theme.colors,
+      primary: primaryColor
+    }
+  }
 
   useEffect(() => {
     setLogged(hasAuth)
   }, [hasAuth])
 
   return (
-    <NavigationContainer>
-      {
-        logged
-          ? (
-          <AppStack/>
-            )
-          : (
-          <LoginStack />
-            )
-      }
-    </NavigationContainer>
+    <ThemeProvider theme={processedTheme} >
+      <NavigationContainer>
+        {
+          logged
+            ? (
+              <AppStack/>
+              )
+            : (
+              <LoginStack />
+              )
+        }
+      </NavigationContainer>
+      <StatusBar />
+    </ThemeProvider>
+
   )
 }
 

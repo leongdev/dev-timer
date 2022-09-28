@@ -6,3 +6,7 @@ export const getUserInformation = (state) => {
     userAuthProvider: state.auth.authProvider
   }
 }
+
+export const getUserMoneyPreferences = (state) => state.user.moneyPreferences
+
+export const getTimerPreferences = (state) => state.user.timerPreferences

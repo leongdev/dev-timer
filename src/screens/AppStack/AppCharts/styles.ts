@@ -47,19 +47,3 @@ export const MoneyContainer = styled.View`
   width: 100%;
   height: ${width * 0.55}px;
 `
-
-export const MoneyDisplayContainer = styled.View`
-  align-items: center;
-  justify-content: center;
-  width: 90%;
-  align-self: center;
-  border-radius: 13px;
-  margin-top: 10px;
-  height: ${width * 0.4}px;
-  background: ${({ theme }) => theme.colors.text};
-`
-export const MoneyValueText = styled.Text`
-  font-family: ${'fira-bold'};
-  font-size: ${width * 0.08}px;
-  color: ${({ theme }) => theme.colors.background};
-`

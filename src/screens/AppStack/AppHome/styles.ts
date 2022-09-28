@@ -14,7 +14,7 @@ export const AdminIconContainer = styled.SafeAreaView`
 
 export const QuoteContainer = styled.SafeAreaView`
   width: 87%;
-  height: ${width * 0.45}px;
+  height: ${width * 0.6}px;
   background: ${({ theme }) => theme.colors.text};
   align-self: center;
   margin-top: 20px;
