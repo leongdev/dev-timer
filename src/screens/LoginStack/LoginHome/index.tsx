@@ -2,7 +2,7 @@
 import * as S from './styles'
 import * as SVG from '../../../components/SvgImages'
 import { RootTabScreenProps } from '../types'
-import { Pressable, View } from 'react-native'
+import { Platform, Pressable, View } from 'react-native'
 import Layout from '../../../../constants/Layout'
 import Button from '../../../components/Button'
 import { useEffect } from 'react'
@@ -12,7 +12,7 @@ import { useTheme } from 'styled-components/native'
 
 import { doc, getDoc } from 'firebase/firestore'
 import { useDispatch } from 'react-redux'
-import { authenticateWithGithub, authenticateWithGoogle } from '../../../store/action/auth'
+import { authenticateWithApple, authenticateWithGithub, authenticateWithGoogle } from '../../../store/action/auth'
 import SafeContainer from '../../../components/SaveContainer'
 
 function LoginHome ({ navigation }: RootTabScreenProps) {
@@ -36,6 +36,10 @@ function LoginHome ({ navigation }: RootTabScreenProps) {
 
   const handleGithubLogin = async () => {
     await dispatch(authenticateWithGithub)
+  }
+
+  const handleAppleLogin = async () => {
+    await dispatch(authenticateWithApple)
   }
 
   const renderPageOne = () => {
@@ -81,6 +85,20 @@ function LoginHome ({ navigation }: RootTabScreenProps) {
         title={'Logar com Github'}
         iconName='github'
       />
+      { Platform.OS === 'ios' &&
+        (
+          <>
+            <View style={{ height: Layout.window.width * 0.04 }}/>
+            <Button
+              onPress={handleAppleLogin}
+              inverted
+              title={'Logar com Apple'}
+              iconName='apple'
+            />
+          </>
+        )
+      }
+
       <S.AppVersionTitle>V{Constants.manifest?.version}</S.AppVersionTitle>
     </S.OnboardingView>
     )

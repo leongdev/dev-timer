@@ -1,4 +1,4 @@
-import { handleGithubSignIn, handleGoogleSignIn } from '../../services/auth'
+import { handleAppleSignIn, handleGithubSignIn, handleGoogleSignIn } from '../../services/auth'
 import { ActionTypes } from './types/index'
 import { defaultProjectState } from '../reducers/projects'
 import { defaultThemeState } from '../reducers/theme'
@@ -30,6 +30,25 @@ const authenticateWithGithub = async (dispatch) => {
     email,
     provider
   } = await handleGithubSignIn()
+
+  dispatch({
+    type: ActionTypes.SIGN_IN,
+    payload: {
+      userName: name,
+      userId: id,
+      userEmail: email,
+      authProvider: provider
+    }
+  })
+}
+
+const authenticateWithApple = async (dispatch) => {
+  const {
+    name,
+    id,
+    email,
+    provider
+  } = await handleAppleSignIn()
 
   dispatch({
     type: ActionTypes.SIGN_IN,
@@ -117,5 +136,6 @@ export {
   authenticateWithGithub,
   authenticateWithEmailPassword,
   authenticateLogout,
-  authenticateDeleteAccount
+  authenticateDeleteAccount,
+  authenticateWithApple
 }

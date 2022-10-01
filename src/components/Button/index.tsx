@@ -11,7 +11,7 @@ interface IButton {
   icon?: ()=> JSX.Element,
   iconRight?: ()=> JSX.Element,
   spaceBetween?: boolean,
-  iconName?: 'google' | 'github',
+  iconName?: 'google' | 'github'| 'apple',
   onPress?: ()=> void,
   loading?: boolean,
   loadingColor?: string,
@@ -41,6 +41,10 @@ function Button ({
       case 'github':
         return (
           <SVG.IconGithub colorA={inverted ? colors.text : colors.background} />
+        )
+      case 'apple':
+        return (
+          <SVG.IconApple colorA={inverted ? colors.text : colors.background} />
         )
     }
   }

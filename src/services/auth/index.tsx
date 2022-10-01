@@ -1,6 +1,7 @@
 import axios from 'axios'
 import * as AuthSession from 'expo-auth-session'
 import * as WebBrowser from 'expo-web-browser'
+import * as AppleAuthentication from 'expo-apple-authentication'
 
 WebBrowser.maybeCompleteAuthSession()
 type AuthResponse = {
@@ -53,6 +54,45 @@ export async function handleGoogleSignIn (): Promise<ISignInformation> {
       id: '',
       email: '',
       provider: ''
+    }
+  }
+}
+
+// @ts-ignore
+export async function handleAppleSignIn (): Promise<ISignInformation> {
+  try {
+    const credential = await AppleAuthentication.signInAsync({
+      requestedScopes: [
+        AppleAuthentication.AppleAuthenticationScope.FULL_NAME,
+        AppleAuthentication.AppleAuthenticationScope.EMAIL
+      ]
+    })
+
+    console.log('CREDENTIAL=> ', credential)
+
+    return {
+      name: credential.fullName?.nickname?.length > 0 ? credential.fullName.nickname : 'Olá Dev',
+      id: credential.identityToken?.length > 0 ? credential.identityToken : '',
+      email: credential.email?.length > 0 ? credential.email : 'loginwithapple@leongdev.com',
+      provider: 'apple'
+    }
+  } catch (e) {
+    if (e.code === 'ERR_CANCELED') {
+      console.log(e)
+      return {
+        name: '',
+        id: '',
+        email: '',
+        provider: ''
+      }
+    } else {
+      console.log(e)
+      return {
+        name: '',
+        id: '',
+        email: '',
+        provider: ''
+      }
     }
   }
 }

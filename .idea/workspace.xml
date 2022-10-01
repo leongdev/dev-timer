@@ -6,11 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="049a26bb-565e-48c0-9a9d-3aaff86c3b74" name="Changes" comment="Finishing the app">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/AppStack/AppHome/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/AppStack/AppHome/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/AppStack/AppHome/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/AppStack/AppHome/styles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/AppStack/AppSettings/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/AppStack/AppSettings/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/SettingsStrack/SettingsFreelanceCalculator/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/SettingsStrack/SettingsFreelanceCalculator/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SvgImages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SvgImages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/LoginStack/LoginHome/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/LoginStack/LoginHome/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/auth/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/auth/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/action/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/action/auth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,24 +33,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/leongdev/Developer/dev-timer/src/screens/AppStack/SettingsStrack",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
-    "ts.external.directory.path": "/Users/leongdev/Developer/dev-timer/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/leongdev/Developer/dev-timer/src/screens/AppStack/SettingsStrack&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/leongdev/Developer/dev-timer/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/screens/AppStack/SettingsStrack" />
@@ -85,7 +87,9 @@
       <workItem from="1664306489715" duration="12000" />
       <workItem from="1664306827262" duration="905000" />
       <workItem from="1664310801203" duration="6387000" />
-      <workItem from="1664361239030" duration="34153000" />
+      <workItem from="1664361239030" duration="35763000" />
+      <workItem from="1664442564506" duration="137000" />
+      <workItem from="1664619593918" duration="1884000" />
     </task>
     <task id="LOCAL-00001" summary="Last Update">
       <created>1663972925967</created>
