@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="049a26bb-565e-48c0-9a9d-3aaff86c3b74" name="Changes" comment="">
+    <list default="true" id="049a26bb-565e-48c0-9a9d-3aaff86c3b74" name="Changes" comment="Fixing bugs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/sounds/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sounds/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SoundBar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SoundBar/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/AppStack/AppHome/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/AppStack/AppHome/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/action/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/action/user.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +84,7 @@
       <workItem from="1664361239030" duration="35763000" />
       <workItem from="1664442564506" duration="137000" />
       <workItem from="1664619593918" duration="6989000" />
-      <workItem from="1664796380615" duration="1663000" />
+      <workItem from="1664796380615" duration="1827000" />
     </task>
     <task id="LOCAL-00001" summary="Last Update">
       <created>1663972925967</created>
@@ -131,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664621708856</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fixing bugs">
+      <created>1664798180529</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1664798180529</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,6 +159,7 @@
     <MESSAGE value="Finishing the app" />
     <MESSAGE value="Adding iOS sign in" />
     <MESSAGE value="Bump release" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bump release" />
+    <MESSAGE value="Fixing bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing bugs" />
   </component>
 </project>
