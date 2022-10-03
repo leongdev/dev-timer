@@ -25,7 +25,9 @@ const NoiseBar = () => {
             await sound.unloadAsync()
           }
 
-          await sound.loadAsync(currentSound.sound)
+          await sound.loadAsync({
+            uri: currentSound.sound
+          })
           await sound.playAsync()
           await sound.setIsLoopingAsync(true)
           setNoiseName(currentSound.name)

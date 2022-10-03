@@ -31,8 +31,9 @@ function AppHome ({ navigation }: RootTabScreenProps<any>) {
   const [isPlaying, setPlaying] = useState(false)
   const [showPause, setShowPause] = useState(false)
   const initialTimer = useSelector(getTimerPreferences)
-  const timerSettings = initialTimer > 0 ? initialTimer * 60 : 60 * 60
+  const [timerSettings, setTimerSettings] = useState(initialTimer > 0 ? initialTimer * 60 : 60 * 60)
   const [count, setCount] = useState(timerSettings)
+  const [showTimer, setShowTimer] = useState(true)
 
   const [quote, setQuote] = useState(quotesData[0])
 
@@ -42,7 +43,7 @@ function AppHome ({ navigation }: RootTabScreenProps<any>) {
   const { colors } = useTheme()
 
   const circleMargin = useResponsive(0.02)
-  const iconSize = useResponsive(0.8)
+
   const circleAnimation = useRef<LottieView>(null)
 
   const minutes = useMemo(() => Math.floor(count / 60), [count])
@@ -67,6 +68,13 @@ function AppHome ({ navigation }: RootTabScreenProps<any>) {
       }
     }
   }, [isPlaying, count])
+
+  useEffect(() => {
+    setShowTimer(false)
+    setShowTimer(true)
+    if (!isPlaying) setCount(initialTimer > 0 ? initialTimer * 60 : 60 * 60)
+    else setTimerSettings(initialTimer > 0 ? initialTimer * 60 : 60 * 60)
+  }, [initialTimer])
 
   const onPressPlay = () => {
     toggleQuote()
@@ -123,72 +131,76 @@ function AppHome ({ navigation }: RootTabScreenProps<any>) {
 
         }}
       /> */}
-      <S.Timer
-        playingSound={currentSound.name}
-      >
-        <LottieView
-          ref={circleAnimation}
-          key={1}
-          colorFilters={[
-            {
-              keypath: 'CIRCLE_A',
-              color: colors.text
-            },
-            {
-              keypath: 'CIRCLE_B',
-              color: colors.primary
-            }
-          ]}
-          style={{
-            position: 'absolute',
-            alignSelf: 'center',
-            marginRight: circleMargin,
-            marginTop: circleMargin
-          }}
-          source={Animations.circle_3}
-        />
-        <LottieView
-          key={2}
-          colorFilters={[
-            {
-              keypath: 'CIRCLE_A',
-              color: colors.text
-            },
-            {
-              keypath: 'CIRCLE_B',
-              color: colors.text
-            }
-          ]}
-          source={animation}
-          autoPlay
-          loop={false}
-        />
-        {!isPlaying &&
-          (
-            <S.PlayerContainer onPress={onPressPlay}>
-              <IconPlayer
-                colorA={colors.primary}
-                width={width * 0.25}
-                height={width * 0.25}
-              />
-            </S.PlayerContainer>
-          )
-        }
 
-        {showPause && (
-          <S.PauseContainer onPress={ () => setShowStopModal(true)} >
-            <S.Pause/>
-          </S.PauseContainer>
-        )}
+      {showTimer && (
+        <S.Timer
+          playingSound={currentSound.name}
+        >
+          <LottieView
+            ref={circleAnimation}
+            key={1}
+            colorFilters={[
+              {
+                keypath: 'CIRCLE_A',
+                color: colors.text
+              },
+              {
+                keypath: 'CIRCLE_B',
+                color: colors.primary
+              }
+            ]}
+            style={{
+              position: 'absolute',
+              alignSelf: 'center',
+              marginRight: circleMargin,
+              marginTop: circleMargin
+            }}
+            source={Animations.circle_3}
+          />
+          <LottieView
+            key={2}
+            colorFilters={[
+              {
+                keypath: 'CIRCLE_A',
+                color: colors.text
+              },
+              {
+                keypath: 'CIRCLE_B',
+                color: colors.text
+              }
+            ]}
+            source={animation}
+            autoPlay
+            loop={false}
+          />
+          {!isPlaying &&
+            (
+              <S.PlayerContainer onPress={onPressPlay}>
+                <IconPlayer
+                  colorA={colors.primary}
+                  width={width * 0.25}
+                  height={width * 0.25}
+                />
+              </S.PlayerContainer>
+            )
+          }
 
-        {isPlaying && (
-          <S.TimerText>
-            {String(minutes).padStart(2, '0')}:
-            {String(seconds).padStart(2, '0')}
-          </S.TimerText>
-        )}
+          {showPause && (
+            <S.PauseContainer onPress={ () => setShowStopModal(true)} >
+              <S.Pause/>
+            </S.PauseContainer>
+          )}
 
-      </S.Timer>
+          {isPlaying && (
+            <S.TimerText>
+              {String(minutes).padStart(2, '0')}:
+              {String(seconds).padStart(2, '0')}
+            </S.TimerText>
+          )}
+
+        </S.Timer>
+      )}
+
       {currentSound.name && (<SoundBar/>)}
       <BaseModal
         onPressBackdrop={() => setQuoteModal(false)}

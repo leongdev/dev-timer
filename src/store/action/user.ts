@@ -26,7 +26,7 @@ const setUserMoneyPreferences = (
 const setTimerPreferences = (
   time: number
 ) => (dispatch) => {
-  dispatch({
+  return dispatch({
     type: ActionTypes.SET_TIME_PREFERENCES,
     payload: time
   })
