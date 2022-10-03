@@ -24,13 +24,13 @@
       "**/*"
     ],
     "ios": {
-      "buildNumber": "0",
+      "buildNumber": "6",
       "bundleIdentifier": "com.leongdev.devtimer",
       "supportsTablet": true,
       "usesAppleSignIn": true
     },
     "android": {
-      "versionCode": 0,
+      "versionCode": 6,
       "adaptiveIcon": {
         "foregroundImage": "./src/assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
