@@ -9,6 +9,7 @@ import SoundBar from '../../../components/SoundBar'
 import DropDown from '../../../components/DropDown'
 import * as S from './styles'
 import InfoCard from '../../../components/InfoCard'
+import { formatMoney } from '../../../utils/text'
 import {
   getFinishedIntervals,
   getNoFinishedIntervals,
@@ -48,11 +49,6 @@ function AppCharts ({ navigation }: RootTabScreenProps<any>) {
     return `${hDisplay}:${mDisplay}:${sDisplay}`
   }
 
-  const formater = new Intl.NumberFormat('pt-BR', {
-    style: 'currency',
-    currency: 'BRL'
-  })
-
   return (
     <SafeContainer>
       <Header
@@ -84,7 +80,7 @@ function AppCharts ({ navigation }: RootTabScreenProps<any>) {
         title='Dinheiro'
         subtitle={'que ganhou codando'}
       />
-      <InfoCard text={getMoney > 0 ? `${formater.format(getMoney)}` : 'R$0.0'} />
+      <InfoCard text={getMoney > 0 ? `R$${formatMoney(getMoney)}` : 'R$0,0'} />
   <S.MoneyContainer/>
       {currentSound.name && (<SoundBar/>)}
     </SafeContainer>

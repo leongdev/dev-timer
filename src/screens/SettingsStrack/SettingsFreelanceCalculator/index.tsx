@@ -13,6 +13,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { setUserMoneyPreferences } from '../../../store/action/user'
 import { getUserMoneyPreferences } from '../../../store/selectors/user'
 import { IMoneyPreferences } from '../../../store/reducers/user'
+import { formatMoney } from '../../../utils/text'
 
 function SettingsFreelanceCalculator ({ navigation }: RootTabScreenProps<any>) {
   const userMoneyInfo: IMoneyPreferences = useSelector(getUserMoneyPreferences)
@@ -33,7 +34,7 @@ function SettingsFreelanceCalculator ({ navigation }: RootTabScreenProps<any>) {
         onPressBack={() => navigation.goBack()}
         title='Freelancer'
       />
-      <InfoCard subtitle={'/hora'} text={`R$${userMoneyInfo.pricePerHour.toFixed(2)}`}/>
+      <InfoCard subtitle={'/hora'} text={`R$${formatMoney(userMoneyInfo.pricePerHour)}`}/>
       <S.LineSpace/>
       <KeyboardAvoidingView
         style={{ flex: 1 }}
@@ -43,7 +44,7 @@ function SettingsFreelanceCalculator ({ navigation }: RootTabScreenProps<any>) {
           <S.TitleText>Quanto você quer ganhar por mês?</S.TitleText>
           <Input
             hasCustomValue
-            customValue={earnPerMoth.toString()}
+            customValue={earnPerMoth.toString().length > 0 ? earnPerMoth.toString() : ''}
             isNumeric
             placeholder={'Quanto quer ganhar por mês'}
             onChangedText={(text) => { setEarnPerMoth(text) }}
@@ -51,7 +52,7 @@ function SettingsFreelanceCalculator ({ navigation }: RootTabScreenProps<any>) {
           <S.TitleText>Quantas horas quer trabalhar por dia?</S.TitleText>
           <Input
             hasCustomValue
-            customValue={hoursPerDay.toString()}
+            customValue={hoursPerDay.toString().length > 0 ? hoursPerDay.toString() : ''}
             isNumeric
             placeholder={'Quantas horas quer trabalhar por dia'}
             onChangedText={(text) => { setHoursPerDay(text) }}
@@ -59,7 +60,7 @@ function SettingsFreelanceCalculator ({ navigation }: RootTabScreenProps<any>) {
           <S.TitleText>Quantos dias quer trabalhar por semana?</S.TitleText>
           <Input
             hasCustomValue
-            customValue={weekWorkDays.toString()}
+            customValue={weekWorkDays.toString().length > 0 ? weekWorkDays.toString() : ''}
             isNumeric
             placeholder={'Quantos dias quer trabalhar por semana'}
             onChangedText={(text) => { setWeekWorkDays(text) }}

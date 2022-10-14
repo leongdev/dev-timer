@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="049a26bb-565e-48c0-9a9d-3aaff86c3b74" name="Changes" comment="Fixing bugs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/globalstyles/fonts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/themes/globalstyles/fonts.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +86,8 @@
       <workItem from="1664442564506" duration="137000" />
       <workItem from="1664619593918" duration="6989000" />
       <workItem from="1664796380615" duration="1827000" />
+      <workItem from="1664972763903" duration="30000" />
+      <workItem from="1665783704978" duration="972000" />
     </task>
     <task id="LOCAL-00001" summary="Last Update">
       <created>1663972925967</created>

@@ -20,8 +20,6 @@ import { getCurrentSound } from '../../../store/selectors/sounds'
 import SoundBar from '../../../components/SoundBar'
 import BaseModal from '../../../components/BaseModal'
 import { saveProjectTime } from '../../../store/action/projects'
-import Button from '../../../components/Button'
-import { MaterialCommunityIcons } from '@expo/vector-icons'
 
 function AppHome ({ navigation }: RootTabScreenProps<any>) {
   const { currentSound } = useSelector(getCurrentSound)
@@ -115,7 +113,10 @@ function AppHome ({ navigation }: RootTabScreenProps<any>) {
         subtitle='bora pro código!'
         rightComponent={<DropDown />}
       />
-  {/*     <Button
+
+  {/*
+  FIXME: Add this later
+  <Button
         inverted
         spaceBetween
         iconRight={() =>

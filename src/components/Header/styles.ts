@@ -4,7 +4,7 @@ import * as Fonts from '../../themes/globalstyles/fonts'
 
 const { width } = Layout.window
 
-export const Container = styled.SafeAreaView`
+export const Container = styled.View`
   width: 90%; 
   align-items: flex-start;
   justify-content: flex-end;
@@ -18,7 +18,7 @@ export const BottomLine = styled.View`
   background: ${({ theme }) => theme.colors.gray300};
   position:absolute;
   bottom: 0px;
-  align-self: center;
+  align-self: center; 
 `
 
 export const HeaderTitle = styled.Text`

@@ -33,7 +33,7 @@ export const TimeValueContainer = styled.View`
 export const TimeTitleText = styled.Text`
   margin-left: 15px; 
   font-family: ${'fira-medium'};
-  font-size: ${width * 0.03}px;
+  font-size: ${width * 0.025}px;
   color: ${({ theme }) => theme.colors.background};
 `
 

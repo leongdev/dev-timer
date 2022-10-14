@@ -4,17 +4,17 @@ const { width } = Layout.window
 
 export const Title = `
   font-family: ${'fira-bold'};  
-  font-size: ${width * 0.07}px;
+  font-size: ${width * 0.06}px;
 `
 
 export const Title2 = `
   font-family: ${'fira-bold'};
-  font-size: ${width * 0.04}px;
+  font-size: ${width * 0.03}px;
 `
 
 export const Subtitle = `
   font-family: ${'fira-medium'};
-  font-size: ${width * 0.045}px;
+  font-size: ${width * 0.04}px;
 `
 
 export const Label1 = `

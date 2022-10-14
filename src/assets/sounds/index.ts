@@ -10,8 +10,8 @@ const Sounds: Array<ISound> = [
   {
     id: 0,
     sound: 'https://daily-noises.s3.amazonaws.com/sounds/lofi_birds.mp3',
-    icon: '🪶',
-    name: '🪶 Birds beat'
+    icon: '🐤',
+    name: '🐤 Birds beat'
   },
   {
     id: 1,

@@ -1,6 +1,6 @@
 
 import { ReactElement, ReactNode } from 'react'
-import { StatusBar, useColorScheme } from 'react-native'
+import { Platform, StatusBar, useColorScheme } from 'react-native'
 import * as S from './styles'
 import { useTheme } from 'styled-components/native'
 
@@ -20,13 +20,25 @@ const SafeContainer = ({
     deviceTheme && deviceTheme === 'light' ? 'dark-content' : 'light-content'
   const { colors } = useTheme()
 
+  if (Platform.OS === 'android') {
+    return (
+      <>
+        <StatusBar barStyle={barColor} />
+        <S.SafeTop color={statusColor || colors.background} />
+        <S.SafeBottom color={backgroundColor || colors.background}>
+          {children}
+        </S.SafeBottom>
+      </>
+    )
+  }
+
   return (
     <>
       <StatusBar barStyle={barColor} />
-      <S.SafeTop color={statusColor || colors.background} />
-      <S.SafeBottom color={backgroundColor || colors.background}>
+      <S.SafeTop2 color={statusColor || colors.background} />
+      <S.SafeBottom2 color={backgroundColor || colors.background}>
         {children}
-      </S.SafeBottom>
+      </S.SafeBottom2>
     </>
   )
 }
