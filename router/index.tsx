@@ -6,8 +6,8 @@ import * as React from 'react'
 import { RootStackParamList } from '../types'
 
 import { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux'
-import { getHasAuth } from '../src/store/selectors/auth'
+import { useSelector, useDispatch } from 'react-redux'
+import { getFirebaseAuth, getHasAuth, getUserAuthData } from '../src/store/selectors/auth'
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { useTheme } from 'styled-components/native'
@@ -29,11 +29,15 @@ import { ThemeProvider } from 'styled-components'
 import themes from '../src/themes'
 import { StatusBar } from 'expo-status-bar'
 import { getCurrentPrimaryColor, getCurrentTheme } from '../src/store/selectors/theme'
+import { setNewUser } from '../config/firebase'
 
 export default function Navigation () {
   const hasAuth = useSelector(getHasAuth)
+  const hasFirebaseAuth = useSelector(getFirebaseAuth)
+  const userAuthData = useSelector(getUserAuthData)
   const primaryColor = useSelector(getCurrentPrimaryColor)
   const reduxTheme: string = useSelector(getCurrentTheme)
+  const dispatch = useDispatch()
 
   const [logged, setLogged] = useState(hasAuth)
 
@@ -47,8 +51,20 @@ export default function Navigation () {
   }
 
   useEffect(() => {
-    setLogged(hasAuth)
-  }, [hasAuth])
+    (async () => {
+      if (hasAuth) {
+        if (!hasFirebaseAuth) {
+          setNewUser({
+            userName: userAuthData.userName,
+            authProvider: userAuthData.authProvider,
+            userEmail: userAuthData.userEmail
+          }, dispatch)
+        }
+      }
+
+      setLogged(hasAuth)
+    })()
+  }, [hasAuth, hasFirebaseAuth])
 
   return (
     <ThemeProvider theme={processedTheme} >

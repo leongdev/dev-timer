@@ -1,10 +1,21 @@
 import { ActionTypes } from '../action/types/index'
+
+export interface IAuthReducer {
+  userName: string,
+  userEmail: string,
+  authProvider: string,
+  hasAuth?: boolean,
+  userId?: string,
+  firebaseAuth?: boolean
+}
+
 const defaultState = {
   hasAuth: false,
   userId: '',
   userName: '',
   userEmail: '',
-  authProvider: ''
+  authProvider: '',
+  firebaseAuth: false
 }
 
 export default (state = { ...defaultState }, action) => {
@@ -26,6 +37,12 @@ export default (state = { ...defaultState }, action) => {
         userEmail: action.payload.userEmail,
         authProvider: action.payload.authProvider,
         hasAuth: false
+      }
+    case ActionTypes.SET_ID:
+      return {
+        ...state,
+        userId: action.payload.userId,
+        firebaseAuth: true
       }
     default:
       return state

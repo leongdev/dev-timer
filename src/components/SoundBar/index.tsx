@@ -18,6 +18,18 @@ const NoiseBar = () => {
 
   useEffect(() => {
     (async () => {
+      Audio.setAudioModeAsync({
+        allowsRecordingIOS: false,
+        staysActiveInBackground: true,
+        playsInSilentModeIOS: true,
+        shouldDuckAndroid: true,
+        playThroughEarpieceAndroid: false
+      })
+    })()
+  }, [])
+
+  useEffect(() => {
+    (async () => {
       try {
         if (isPlaying && currentSound.name.length > 0) {
           if (currentSound.name !== noiseName && noiseName.length > 0) {

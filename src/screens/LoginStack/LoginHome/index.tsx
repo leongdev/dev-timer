@@ -17,18 +17,7 @@ import SafeContainer from '../../../components/SaveContainer'
 
 function LoginHome ({ navigation }: RootTabScreenProps) {
   const { colors } = useTheme()
-  const dispatch = useDispatch()
-
-  useEffect(() => {
-    // (async () => {
-    //   try {
-    //     const response = await getDoc(doc(firebaseInit.database, 'users', 'zKfWLa3lyvcG3ez85oqy'))
-    //     console.log('RESPONSE', response.data())
-    //   } catch (error) {
-    //     console.log('ERROR =>', error)
-    //   }
-    // })()
-  }, [])
+  const dispatch = useDispatch() 
 
   const handleGoogleLogin = async () => {
     await dispatch(authenticateWithGoogle)
@@ -85,6 +74,7 @@ function LoginHome ({ navigation }: RootTabScreenProps) {
         title={'Logar com Github'}
         iconName='github'
       />
+
       { Platform.OS === 'ios' &&
         (
           <>
