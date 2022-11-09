@@ -1,0 +1,42 @@
+{
+  "lists": [
+    {
+      "id": "0457e1fc-f3d3-44e5-8fbe-51d3a6fe6a19",
+      "title": "📂 Project Data",
+      "cards": []
+    },
+    {
+      "id": "5ee74cbf-d2fa-4513-a117-3e432ee3338d",
+      "title": "🦄 Planned",
+      "cards": []
+    },
+    {
+      "id": "f7077c7f-9cf8-46c2-a59b-cdfbc50b9dcd",
+      "title": "☁️ in Route",
+      "cards": []
+    },
+    {
+      "id": "58a81a4b-0731-45cd-832d-a8e2884e5c05",
+      "title": "🛬 Landed",
+      "cards": []
+    }
+  ],
+  "archive": {
+    "lists": [],
+    "cards": []
+  },
+  "settings": {
+    "labels": [
+      {
+        "id": "8f96ec8e-4ee0-4a2c-9f05-b853c3fabaf8",
+        "title": "Test",
+        "color": "#ff9f1a"
+      },
+      {
+        "id": "4b5ce70d-ecb8-464d-be2d-f144fa784923",
+        "title": "wewe",
+        "color": "#f2d600"
+      }
+    ]
+  }
+}
