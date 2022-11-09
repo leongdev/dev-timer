@@ -12,6 +12,15 @@
           "labels": [],
           "checkboxes": [],
           "comments": []
+        },
+        {
+          "id": "d0cbe3c7-c49c-4f99-a6ef-dc9e6b319812",
+          "listId": "0457e1fc-f3d3-44e5-8fbe-51d3a6fe6a19",
+          "title": "Adicionar conversão de moedas e a possibilidade dos usuários poderem colocar uma hora de trabalho diferente pra cada projeto",
+          "description": "",
+          "labels": [],
+          "checkboxes": [],
+          "comments": []
         }
       ]
     },
