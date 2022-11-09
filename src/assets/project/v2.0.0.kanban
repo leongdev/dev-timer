@@ -2,13 +2,69 @@
   "lists": [
     {
       "id": "0457e1fc-f3d3-44e5-8fbe-51d3a6fe6a19",
-      "title": "📂 Project Data",
-      "cards": []
+      "title": "💡 Ideas",
+      "cards": [
+        {
+          "id": "5400e798-6647-4390-bc2b-936c0517f98e",
+          "listId": "0457e1fc-f3d3-44e5-8fbe-51d3a6fe6a19",
+          "title": "Criar estimativas de gastos nos projetos e notificar quando ultrapassar o planejado. ",
+          "description": "",
+          "labels": [],
+          "checkboxes": [],
+          "comments": []
+        }
+      ]
     },
     {
       "id": "5ee74cbf-d2fa-4513-a117-3e432ee3338d",
       "title": "🦄 Planned",
-      "cards": []
+      "cards": [
+        {
+          "id": "957e96d6-9f01-4256-a16e-53df98f07d54",
+          "listId": "5ee74cbf-d2fa-4513-a117-3e432ee3338d",
+          "title": "Sound Screen",
+          "description": "",
+          "labels": [
+            {
+              "id": "8f96ec8e-4ee0-4a2c-9f05-b853c3fabaf8",
+              "title": "Design",
+              "color": "#c377e0"
+            }
+          ],
+          "checkboxes": [],
+          "comments": []
+        },
+        {
+          "id": "1ee01046-7ca0-428d-94bf-a93b8713b901",
+          "listId": "5ee74cbf-d2fa-4513-a117-3e432ee3338d",
+          "title": "Reports Screen",
+          "description": "",
+          "labels": [
+            {
+              "id": "8f96ec8e-4ee0-4a2c-9f05-b853c3fabaf8",
+              "title": "Design",
+              "color": "#c377e0"
+            }
+          ],
+          "checkboxes": [],
+          "comments": []
+        },
+        {
+          "id": "4fc4c50c-3a80-4016-b404-d1224d59e86a",
+          "listId": "5ee74cbf-d2fa-4513-a117-3e432ee3338d",
+          "title": "Settings Screen",
+          "description": "",
+          "labels": [
+            {
+              "id": "8f96ec8e-4ee0-4a2c-9f05-b853c3fabaf8",
+              "title": "Design",
+              "color": "#c377e0"
+            }
+          ],
+          "checkboxes": [],
+          "comments": []
+        }
+      ]
     },
     {
       "id": "f7077c7f-9cf8-46c2-a59b-cdfbc50b9dcd",
@@ -29,13 +85,13 @@
     "labels": [
       {
         "id": "8f96ec8e-4ee0-4a2c-9f05-b853c3fabaf8",
-        "title": "Test",
-        "color": "#ff9f1a"
+        "title": "Design",
+        "color": "#c377e0"
       },
       {
         "id": "4b5ce70d-ecb8-464d-be2d-f144fa784923",
-        "title": "wewe",
-        "color": "#f2d600"
+        "title": "Programming",
+        "color": "#eb5a46"
       }
     ]
   }
