@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app'
-import { getFirestore } from 'firebase/firestore'
+import { getFirestore, getDocs, collection } from 'firebase/firestore'
 
 const firebaseConfig = {
   apiKey: 'AIzaSyDXI1SgGT6I41n1BMCwCpFgFsdKuzUA_Ss',
@@ -13,6 +13,13 @@ const firebaseConfig = {
 
 const firebaseApp = initializeApp(firebaseConfig)
 const database = getFirestore(firebaseApp)
+
+export const consoleFirestore = async () => {
+  const querySnapshot = await getDocs(collection(database, 'users'))
+  querySnapshot.forEach((doc) => {
+    console.log(`${doc.id} => ${JSON.stringify(doc.data())}`)
+  })
+}
 
 export default {
   database,

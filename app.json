@@ -16,13 +16,9 @@
       "fallbackToCacheTimeout": 0
     },
     "packagerOpts": {
-      "sourceExts": [
-        "cjs"
-      ]
+      "sourceExts": ["cjs"]
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "buildNumber": "7",
       "bundleIdentifier": "com.leongdev.devtimer",
