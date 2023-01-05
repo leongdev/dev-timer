@@ -21,6 +21,24 @@
           "labels": [],
           "checkboxes": [],
           "comments": []
+        },
+        {
+          "id": "cb729308-160e-4f71-bec0-fa16f05d1173",
+          "listId": "0457e1fc-f3d3-44e5-8fbe-51d3a6fe6a19",
+          "title": "Exportar orçamento",
+          "description": "",
+          "labels": [],
+          "checkboxes": [],
+          "comments": []
+        },
+        {
+          "id": "e6dfd847-983a-4876-af1b-2631a93b0084",
+          "listId": "0457e1fc-f3d3-44e5-8fbe-51d3a6fe6a19",
+          "title": "Exportar timer em csv",
+          "description": "",
+          "labels": [],
+          "checkboxes": [],
+          "comments": []
         }
       ]
     },
@@ -28,102 +46,6 @@
       "id": "5ee74cbf-d2fa-4513-a117-3e432ee3338d",
       "title": "🦄 Planned",
       "cards": [
-        {
-          "id": "48552975-19e1-4291-986a-f346d0a049f5",
-          "listId": "5ee74cbf-d2fa-4513-a117-3e432ee3338d",
-          "title": "Timeflow 2",
-          "description": "",
-          "dueDate": "2022-11-17T18:17:00.000Z",
-          "labels": [
-            {
-              "id": "29417236-e0bb-4b35-bcc9-6dc049d2a03f",
-              "title": "Video",
-              "color": "#ff9f1a"
-            }
-          ],
-          "checkboxes": [
-            {
-              "id": "631a2fdf-fc5c-40f6-bbc8-0e72c03e71d9",
-              "title": "Roteiro",
-              "checked": false
-            },
-            {
-              "id": "1de28768-15ec-4c32-95ca-552ac29d33f9",
-              "title": "Gravação",
-              "checked": false
-            },
-            {
-              "id": "527568cc-b73d-4945-a637-48e16d62bc42",
-              "title": "Edição",
-              "checked": false
-            }
-          ],
-          "comments": []
-        },
-        {
-          "id": "8178bf92-9aea-40bd-9ee6-bafd493d15c9",
-          "listId": "5ee74cbf-d2fa-4513-a117-3e432ee3338d",
-          "title": "Timeflow 3",
-          "description": "",
-          "dueDate": "2022-11-22T18:17:00.000Z",
-          "labels": [
-            {
-              "id": "29417236-e0bb-4b35-bcc9-6dc049d2a03f",
-              "title": "Video",
-              "color": "#ff9f1a"
-            }
-          ],
-          "checkboxes": [
-            {
-              "id": "631a2fdf-fc5c-40f6-bbc8-0e72c03e71d9",
-              "title": "Roteiro",
-              "checked": false
-            },
-            {
-              "id": "1de28768-15ec-4c32-95ca-552ac29d33f9",
-              "title": "Gravação",
-              "checked": false
-            },
-            {
-              "id": "527568cc-b73d-4945-a637-48e16d62bc42",
-              "title": "Edição",
-              "checked": false
-            }
-          ],
-          "comments": []
-        },
-        {
-          "id": "eceb5b67-dd0c-4c40-87f6-e86c9cdbccaf",
-          "listId": "5ee74cbf-d2fa-4513-a117-3e432ee3338d",
-          "title": "Timeflow 4",
-          "description": "",
-          "dueDate": "2022-11-24T18:17:00.000Z",
-          "labels": [
-            {
-              "id": "29417236-e0bb-4b35-bcc9-6dc049d2a03f",
-              "title": "Video",
-              "color": "#ff9f1a"
-            }
-          ],
-          "checkboxes": [
-            {
-              "id": "631a2fdf-fc5c-40f6-bbc8-0e72c03e71d9",
-              "title": "Roteiro",
-              "checked": false
-            },
-            {
-              "id": "1de28768-15ec-4c32-95ca-552ac29d33f9",
-              "title": "Gravação",
-              "checked": false
-            },
-            {
-              "id": "527568cc-b73d-4945-a637-48e16d62bc42",
-              "title": "Edição",
-              "checked": false
-            }
-          ],
-          "comments": []
-        },
         {
           "id": "1d9a0347-1e6d-4e26-b3ca-3706de1eafce",
           "listId": "5ee74cbf-d2fa-4513-a117-3e432ee3338d",
@@ -220,38 +142,6 @@
       "id": "f7077c7f-9cf8-46c2-a59b-cdfbc50b9dcd",
       "title": "☁️ in Route",
       "cards": [
-        {
-          "id": "028b6a8c-9c82-4a0e-85c1-984f2194bf3a",
-          "listId": "f7077c7f-9cf8-46c2-a59b-cdfbc50b9dcd",
-          "title": "Timeflow 1",
-          "description": "",
-          "dueDate": "2022-11-15T18:17:00.000Z",
-          "labels": [
-            {
-              "id": "29417236-e0bb-4b35-bcc9-6dc049d2a03f",
-              "title": "Video",
-              "color": "#ff9f1a"
-            }
-          ],
-          "checkboxes": [
-            {
-              "id": "631a2fdf-fc5c-40f6-bbc8-0e72c03e71d9",
-              "title": "Roteiro",
-              "checked": false
-            },
-            {
-              "id": "1de28768-15ec-4c32-95ca-552ac29d33f9",
-              "title": "Gravação",
-              "checked": false
-            },
-            {
-              "id": "527568cc-b73d-4945-a637-48e16d62bc42",
-              "title": "Edição",
-              "checked": false
-            }
-          ],
-          "comments": []
-        },
         {
           "id": "6bc39842-932a-4ae6-960d-107f33b60b9c",
           "listId": "f7077c7f-9cf8-46c2-a59b-cdfbc50b9dcd",
